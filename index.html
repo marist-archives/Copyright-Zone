@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+		<title>The Copyright Zone</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
+		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
+		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library_child.css" />
+		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/menuStyle.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="copyright.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("a[rel^='prettyPhoto']").prettyPhoto();
+				$("div.wideBox").accordion({
+					collapsible : true
+				});
+
+				$('div#tophead').toggle(function() {
+					$('div#arrow').css('background-image', 'url("images/ARROW1.png")');
+					$('div#arrow').css('background-repeat', 'no-repeat');
+					$('div#tophead').css('border', 'solid #ebedf2');
+				}, function() {
+					$('div#arrow').css('background-image', 'url("images/ARROW2.png")');
+					$('div#arrow').css('background-repeat', 'no-repeat');
+					$('div#tophead').css('border', 'solid #ebedf2');
+				});
+
+			});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3375146-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</head>
+	<body>
+		<div id="headerContainer">
+			<a href="http://library.marist.edu/" target="_self"> <div id="header"></div> </a>
+		</div>
+		<div id="menu">
+			<div id="menuItems"></div>
+		</div>
+		<div class="wideBox">
+
+			<div id="tophead">
+				<div id="arrow"></div><h1>YOU HAVE NOW ENTERED THE COPYRIGHT ZONE</h1>
+			</div>
+
+			<div id="inst">
+				<p>
+					Marist has divided resources you may want to use into 3 Zones:
+				</p>
+				<ol style="text-align: left;">
+					<li>
+						The <a href="resources.html?iframe=true&width=55%&height=80%" class="link1" rel="prettyphoto[iframes]">Safety Zone</a> which contains hundreds of thousands of books, millions of scholarly articles, hundreds of hours of video, and other resources Marist has already obtained copyright permission for you to use.
+					</li>
+					<li>
+						The <a href="msz.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Moderately Safe</a> Zone has far fewer resources. For the most part copyright permission has not been obtained by the College and in some cases would require you to obtain permission before they can be used in your class.
+					</li>
+					<li>
+						The <a href="danger.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Danger Zone</a>. Resources in this zone definitely require you to obtain permission and pay fees for limited use.
+					</li>
+
+				</ol>
+				<p>
+					You can click on each zone to link to the materials or external sites that fall within each.
+				</p>
+				<p>
+					BUT FIRST TEST YOUR COPYRIGHT IQ. YOU MAY FIND YOU CAN DO WHAT YOU WANT IN THE SAFETY ZONE AND NOT WORRY ABOUT COPYRIGHT ISSUES.
+				</p>
+				<p>
+					SELECT FROM THE ITEMS BELOW WHAT IT IS YOU WANT TO DO AND DRAG IT INTO THE ZONE YOU THINK IT FITS. IF IT DOESN’T IT WILL BOUNCE BACK UNTIL YOU FIT IT INTO THE CORRECT BOX:
+				</p>
+
+				<p id="direct">
+					<a href="#" class="viewresults" onclick="getresults()">View the results directly</a>
+				</p>
+				<br />
+			</div>
+
+		</div>
+
+		<div id="content">
+			<div class="contentFrame">
+				<a href="http://library.marist.edu/forms/ask.php" target="_blank"><div id="helpTab"><div class="rotate">Help?</div></div></a>
+				<div id="cardPile">
+
+				</div>
+			</div>
+			<div id="cardSlots">
+
+			</div>
+			<div id="info"></div>
+
+			<div id="successMessage">
+				<h2>Congratulations!</h2>
+				<button onclick="init()">
+					Play Again
+				</button>
+			</div>
+
+		</div>
+
+	</body>
+</html>
+
