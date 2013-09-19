@@ -8,13 +8,13 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
-		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library_child.css" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/menuStyle.css" />
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="copyright.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>	
+			
 		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
@@ -23,7 +23,7 @@
 				$("div.wideBox").accordion({
 					collapsible : true
 				});
-
+		
 				$('div#tophead').toggle(function() {
 					$('div#arrow').css('background-image', 'url("images/ARROW1.png")');
 					$('div#arrow').css('background-repeat', 'no-repeat');
@@ -33,6 +33,35 @@
 					$('div#arrow').css('background-repeat', 'no-repeat');
 					$('div#tophead').css('border', 'solid #ebedf2');
 				});
+				
+				$('#a').show();
+				$('#b,#c,#d,#e').hide();
+				
+			$('div.side_bar a').click(function(){
+				var content = $(this).attr('href');
+				var contentId = $(this).attr('id');
+				$(content).show();
+				
+				$(this).addClass('side_link_current');
+				
+				if (content == '#b') {
+					$('#a,#c,#d,#e').hide();
+				}
+				else if (content == '#c'){
+					$('#a,#b,#d,#e').hide();
+				}
+				else if (content == '#d'){
+					$('#a,#b,#c,#e').hide();
+				}
+				else if (content == '#e'){
+					$('#a,#b,#c,#d').hide();
+				}else  {
+					$('#e,#b,#c,#d').hide();
+				}
+				
+			});
+				//$('#a-link').toggleClass('side_link_current', 'side_link');
+		
 
 			});
 		</script>
@@ -50,7 +79,7 @@
 			})();
 
 		</script>
-
+		
 	</head>
 	<body>
 		<div id="headerContainer">
@@ -62,40 +91,93 @@
 		<div class="wideBox">
 
 			<div id="tophead">
-				<div id="arrow"></div><h1>YOU HAVE NOW ENTERED THE COPYRIGHT ZONE</h1>
+				<div id="arrow"></div><h1>YOU HAVE NOW ENTERED THE COPYRIGHT ZONE </h1>
 			</div>
+			<div id="tabs">
+				<div class="side_bar" style="margin-top: 0px;">
+					<ul>
+						<li>
+							<a href="#a" id="#a-link" class="side_link_current">How to play?</a>
+						</li>
+						<li>
+							<a href="#b" id="#b-link" class="side_link">Marist Copyright Policy</a>
+						</li>
+						<li>
+							<a href="#c" id="#c-link" class="side_link">Fair use information</a>
+						</li>
+						<li>
+							<a href="#d" id="#d-link" class="side_link">Teach Act</a>
+						</li>
+						<li>
+							<a href="#e" id="#e-link" class="side_link">Ceative Commons</a>
+						</li>
+					</ul>
+				</div>
 
-			<div id="inst">
-				<p>
-					Marist has divided resources you may want to use into 3 Zones:
-				</p>
-				<ol style="text-align: left;">
-					<li>
-						The <a href="resources.html?iframe=true&width=55%&height=80%" class="link1" rel="prettyphoto[iframes]">Safety Zone</a> which contains hundreds of thousands of books, millions of scholarly articles, hundreds of hours of video, and other resources Marist has already obtained copyright permission for you to use.
-					</li>
-					<li>
-						The <a href="msz.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Moderately Safe</a> Zone has far fewer resources. For the most part copyright permission has not been obtained by the College and in some cases would require you to obtain permission before they can be used in your class.
-					</li>
-					<li>
-						The <a href="danger.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Danger Zone</a>. Resources in this zone definitely require you to obtain permission and pay fees for limited use.
-					</li>
+				<div class="content">
+					<div id="a">
+						<h2>
+							How to play?
+						</h2>
+						<p>
+							Marist has divided resources you may want to use into 3 Zones:
+						</p>
+						<ol style="text-align: left;">
+							<li>
+								The <a href="resources.html?iframe=true&width=55%&height=80%"  class="link1" rel="prettyphoto[iframes]">Safety Zone</a> which contains hundreds of thousands of books, millions of scholarly articles, hundreds of hours of video, and other resources Marist has already obtained copyright permission for you to use.
+							</li>
+							<li>
+								The <a href="msz.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Moderately Safe</a> Zone has far fewer resources. For the most part copyright permission has not been obtained by the College and in some cases would require you to obtain permission before they can be used in your class.
+							</li>
+							<li>
+								The <a href="danger.html?iframe=true&width=55%&height=75%" class="link1" rel="prettyphoto[iframes]">Danger Zone</a>. Resources in this zone definitely require you to obtain permission and pay fees for limited use.
+							</li>
 
-				</ol>
-				<p>
-					You can click on each zone to link to the materials or external sites that fall within each.
-				</p>
-				<p>
-					BUT FIRST TEST YOUR COPYRIGHT IQ. YOU MAY FIND YOU CAN DO WHAT YOU WANT IN THE SAFETY ZONE AND NOT WORRY ABOUT COPYRIGHT ISSUES.
-				</p>
-				<p>
-					SELECT FROM THE ITEMS BELOW WHAT IT IS YOU WANT TO DO AND DRAG IT INTO THE ZONE YOU THINK IT FITS. IF IT DOESN’T IT WILL BOUNCE BACK UNTIL YOU FIT IT INTO THE CORRECT BOX:
-				</p>
+						</ol>
+						<p>
+							You can click on each zone to link to the materials or external sites that fall within each.
+						</p>
+						<p>
+							BUT FIRST TEST YOUR COPYRIGHT IQ. YOU MAY FIND YOU CAN DO WHAT YOU WANT IN THE SAFETY ZONE AND NOT WORRY ABOUT COPYRIGHT ISSUES.
+						</p>
+						<p>
+							SELECT FROM THE ITEMS BELOW WHAT IT IS YOU WANT TO DO AND DRAG IT INTO THE ZONE YOU THINK IT FITS. IF IT DOESN’T IT WILL BOUNCE BACK UNTIL YOU FIT IT INTO THE CORRECT BOX:
+						</p>
 
-				<p id="direct">
-					<a href="#" class="viewresults" onclick="getresults()">View the results directly</a>
-				</p>
-				<br />
+						<p id="direct">
+							<a href="#" class="viewresults" onclick="getresults()">View the results directly</a>
+						</p>
+						<br />
+					</div>
+					<div id="b">
+						<h2>
+							Marist Copyright Policy
+						</h2>
+					</div>
+					<div id="c">
+						<h2> Fair Use Checklist </h2>
+				
+							<a href="http://copyright.cornell.edu/policies/docs/Fair_Use_Checklist.pdf" target="_blank" class="link1">Checklist for conducting a fair use analysis before using copyrighted materials.</a>
+
+					</div>
+				</div>
+
+					
+			
 			</div>
+				
+				</div>
+				<!--div id="b">
+					Content of B
+				</div>
+				<div id="c">
+					Content of C
+				</div-->
+				
+			
+
+
+			
 
 		</div>
 

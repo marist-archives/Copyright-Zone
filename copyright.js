@@ -48,7 +48,7 @@ function init() {
 }
 
 function handleCardDrop(event, ui) {
-	$('div.wideBox div#inst').hide();
+	$('div.wideBox div#tabs').hide();
 	$('div#arrow').css('background-image', 'url("images/ARROW1.png")');
 	$('div#arrow').css('background-repeat', 'no-repeat');
 
@@ -136,7 +136,7 @@ function getresults() {
 	$('div#info').effect("clip");
 	$('a#viewresults').hide();
 	$('em').hide();
-	$('div.wideBox div#inst').hide();
+	$('div.wideBox div#tabs').hide();
 
 	$('div#1slot ul').remove();
 	$('div#2slot ul').remove();

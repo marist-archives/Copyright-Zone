@@ -21,7 +21,7 @@ h1, h2, h3, h4 {
 
 .wideBox {
 	clear: both;
-	text-align: center;
+	/*text-align: center;*/
 	margin: 5px;
 	background: #ebedf2;
 	border: 1px solid #333;
@@ -282,11 +282,6 @@ a.link{
 	
 }
 
-/*
-a.link:hover {
-	color: blue;
-}
-*/
 #arrow {
 	float: left;
 	margin-top: 5px;
@@ -307,4 +302,76 @@ div#tophead {
 
 #arrow:hover {
 	cursor: pointer;
+}
+
+#tabs{
+	width: 950px;
+	height: 415px;
+}
+#a, #b, #c{
+	width: 665px;
+	display: block;
+	text-align:left;
+}
+
+.content
+{float: left;
+width: 700px;
+left: 200px;
+padding-left: 30px;
+padding-bottom: 20px;
+}
+
+.side_bar{
+	height: 200px;
+padding-right: 0px;
+width: 200px;
+float: left;
+margin-top: 35px;
+list-style:none;
+}
+
+
+.side_link{
+	color: #333;
+padding-bottom: 20px;
+font-size: 14px;
+}
+
+
+.side_link_current{
+	color: #B31B1B;
+padding-bottom: 20px;
+font-size: 14px;
+}
+
+.side_bar ul{
+list-style: none; 	
+}
+
+.side_bar li{
+text-align: left;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #AEAEA6;
+padding: 5px;	
+}
+
+a.side_link:link, a.side_link:visited{
+	color:#333;
+	padding-bottom: 20px;
+	font-size:14px;
+}
+
+a.side_link:hover{
+	color:#B31B1B;
+	padding-bottom: 20px;
+	font-size:14px;
+}
+
+a.side_link_current:link, a.side_link_current:visited{
+	color:#B31B1B;
+	padding-bottom: 20px;
+	font-size:14px;
+
 }
