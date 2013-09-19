@@ -157,7 +157,7 @@ function getinfo(rid, flag) {
 		$('div#info').css('background-color', '#ddf');
 	} else if (flag == 2) {
 		//if (rid == 1) {
-		x = "This is incorrect. Try again!!";
+		x = "Oops! This is incorrect. Try again!";
 		//}
 		$('div#info div').remove();
 		$('div#info').css('background-color', '#b31b1b');
