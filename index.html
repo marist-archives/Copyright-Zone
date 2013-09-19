@@ -33,36 +33,6 @@
 					$('div#arrow').css('background-repeat', 'no-repeat');
 					$('div#tophead').css('border', 'solid #ebedf2');
 				});
-				
-				$('#a').show();
-				$('#b,#c,#d,#e').hide();
-				
-			$('div.side_bar a').click(function(){
-				var content = $(this).attr('href');
-				var contentId = $(this).attr('id');
-				$(content).show();
-				
-				$(this).addClass('side_link_current');
-				
-				if (content == '#b') {
-					$('#a,#c,#d,#e').hide();
-				}
-				else if (content == '#c'){
-					$('#a,#b,#d,#e').hide();
-				}
-				else if (content == '#d'){
-					$('#a,#b,#c,#e').hide();
-				}
-				else if (content == '#e'){
-					$('#a,#b,#c,#d').hide();
-				}else  {
-					$('#e,#b,#c,#d').hide();
-				}
-				
-			});
-				//$('#a-link').toggleClass('side_link_current', 'side_link');
-		
-
 			});
 		</script>
 		<script type="text/javascript">
@@ -89,27 +59,26 @@
 			<div id="menuItems"></div>
 		</div>
 		<div class="wideBox">
-
 			<div id="tophead">
 				<div id="arrow"></div><h1>YOU HAVE NOW ENTERED THE COPYRIGHT ZONE </h1>
 			</div>
 			<div id="tabs">
 				<div class="side_bar" style="margin-top: 0px;">
-					<ul>
+					<ul class="tabs">
 						<li>
-							<a href="#a" id="#a-link" class="side_link_current">How to play?</a>
+							<a href="#a" id="#a-link" class="side_link">How to Play</a>
 						</li>
 						<li>
 							<a href="#b" id="#b-link" class="side_link">Marist Copyright Policy</a>
 						</li>
 						<li>
-							<a href="#c" id="#c-link" class="side_link">Fair use information</a>
+							<a href="#c" id="#c-link" class="side_link">Fair Use Information</a>
 						</li>
 						<li>
 							<a href="#d" id="#d-link" class="side_link">Teach Act</a>
 						</li>
 						<li>
-							<a href="#e" id="#e-link" class="side_link">Ceative Commons</a>
+							<a href="#e" id="#e-link" class="side_link">Creative Commons</a>
 						</li>
 					</ul>
 				</div>
@@ -117,7 +86,7 @@
 				<div class="content">
 					<div id="a">
 						<h2>
-							How to play?
+							How to Play
 						</h2>
 						<p>
 							Marist has divided resources you may want to use into 3 Zones:
@@ -155,30 +124,12 @@
 						</h2>
 					</div>
 					<div id="c">
-						<h2> Fair Use Checklist </h2>
+						<h2>Fair Use Checklist </h2>
 				
 							<a href="http://copyright.cornell.edu/policies/docs/Fair_Use_Checklist.pdf" target="_blank" class="link1">Checklist for conducting a fair use analysis before using copyrighted materials.</a>
-
 					</div>
 				</div>
-
-					
-			
 			</div>
-				
-				</div>
-				<!--div id="b">
-					Content of B
-				</div>
-				<div id="c">
-					Content of C
-				</div-->
-				
-			
-
-
-			
-
 		</div>
 
 		<div id="content">

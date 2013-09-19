@@ -375,3 +375,21 @@ a.side_link_current:link, a.side_link_current:visited{
 	font-size:14px;
 
 }
+
+.tabs {
+	margin-left: -15px;
+}
+
+.tabs a {
+	font-size: 1.3em;
+	text-decoration:none;
+}
+
+.tabs a:hover {
+	color: #b31b1b;
+}
+
+.tabs a.active {
+	color: #b31b1b;
+	font-weight: bold;
+}
