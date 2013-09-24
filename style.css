@@ -28,6 +28,7 @@ h1, h2, h3, h4 {
 	margin-right: auto;
 	margin-left: auto;
 	width: 960px;
+
 }
 
 .wideBox h1 {
@@ -303,6 +304,8 @@ width: 700px;
 left: 200px;
 padding-left: 30px;
 padding-bottom: 20px;
+overflow: auto;
+height: 380px;
 }
 
 .side_bar{
