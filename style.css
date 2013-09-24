@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
 	background: #ffd;
 }
 
-#cardSlots, #cardPile {
+#cardSlots, #cardPile, #successMessage {
 	width: 950px;
 	height: 380px;
 	padding: 20px;
@@ -208,7 +208,7 @@ h1, h2, h3, h4 {
  #card9.correct { background: purple; }
  #card10.correct { background: violet; }
  */
-
+/* "You did it!" message */
 .correct {
 	visibility: hidden;
 }
@@ -225,25 +225,8 @@ h1, h2, h3, h4 {
 	margin-right: 10px;
 }
 
-/* "You did it!" message */
+/* "Congratulations!" message */
 
-#successMessage {
-	position: absolute;
-	left: 580px;
-	top: 250px;
-	width: 0;
-	height: 0;
-	z-index: 100;
-	background: #666;
-	border: 2px solid #333;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	-moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-	-webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-	box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-	padding: 20px;
-}
 
 .resource {
 	margin-top: -25px;

@@ -8,13 +8,13 @@ var reasons = ['This is fine because the Artstor’s “Terms of Use” specific
 function init() {
 
 	// Hide the success message
-	$('#successMessage').hide();
+	/*$('#successMessage').hide();
 	$('#successMessage').css({
 		left : '580px',
 		top : '250px',
 		width : 0,
 		height : 0
-	});
+	});*/
 
 	// Reset the game
 	correctCards = 0;
@@ -124,22 +124,21 @@ function handleCardDrop(event, ui) {
 	// If all the cards have been placed correctly then display a message
 	// and reset the cards for another go
 
-	if (correctCards == 10) {
-		$('#successMessage').show();
+	if (correctCards == 1) {
+		/*$('#successMessage').show();
 		$('#successMessage').animate({
 			left : '580px',
 			top : '500px',
 			width : '400px',
 			height : '100px',
 			opacity : 1
-		});
-
-		//	$('div#cardPile').effect("clip");
-		$('div#info p').remove();
-		$('div#info').css('background-color', '#ffffff');
-		$('div.wideBox div#inst').hide();
-		$('div#arrow').css('background-image', 'url("images/ARROW1.png")');
-		$('div#arrow').css('background-repeat', 'no-repeat');
+		});*/
+		
+		$('#cardPile').after('<div id="successMessage">Congratulations!</div><p>You have finished the game by successfully placing all the cards in their zones.</p>');
+		$('#cardPile').remove();
+		$("html, body").animate({
+	        scrollTop: 0
+	    }, 500);
 
 	}
 
