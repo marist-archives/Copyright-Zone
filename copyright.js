@@ -133,9 +133,8 @@ function handleCardDrop(event, ui) {
 			height : '100px',
 			opacity : 1
 		});*/
-		
-		$('#cardPile').after('<div id="successMessage">Congratulations!</div><p>You have finished the game by successfully placing all the cards in their zones.</p>');
-		$('#cardPile').remove();
+		$('#cardPile div').remove();
+		$('#cardPile').append('<p id="successMessage">Congratulations!</p><p>You have finished the game by successfully placing all the cards in their zones.</p><p>Click <a href="#" onclick="init();">here</a> to play again.</p>');
 		$("html, body").animate({
 	        scrollTop: 0
 	    }, 500);
