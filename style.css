@@ -228,8 +228,23 @@ h1, h2, h3, h4 {
 
 /* "Congratulations!" message */
 #successMessage {
-	font-size: 35px;
+	position: absolute;
+	left: 25px;
+	top: 20px;
+	width: 950px;
+	height: 200px;
+	display: hidden;
+}
+
+#successMessage #playAgain {
+	font-size: 20px;
 	font-weight: bold;
+	color: #666;
+}
+
+#successMessage #playAgain:hover {
+	color: #b31b1b;
+	text-decoration: underline;
 }
 
 .resource {
