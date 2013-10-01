@@ -78,7 +78,7 @@ h1, h2, h3, h4 {
 	box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 
-#helpTab, #howToPlayTab {
+#helpTab {
 	position: absolute;
 	width: 20px;
 	height: 50px;
@@ -97,17 +97,20 @@ h1, h2, h3, h4 {
 	box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 
-#howToPlayTab {
-	position: absolute;
-	width: 20px;
-	height: 100px;
-	top: 133px;
-	left: -28px;
-}
-
-#helpTab:hover, #howToPlayTab:hover {
+#helpTab:hover {
 	color: white;
 	background-color: #b31b1b;
+}
+
+#resultsTab {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 133px;
+	left: -16px;
+	background-repeat: none;
+	background-image: url('images/ribbon.png');
+	cursor: pointer;
 }
 
 .rotate {

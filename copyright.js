@@ -77,6 +77,12 @@ function init() {
 			e.preventDefault();
 		});
 	});
+	
+	$('#resultsTab').mousedown(function() {
+	    $(this).animate({left: "-=30", width: "60px"}, 100);
+	}).bind('mouseup', function() {
+	    $(this).animate({left: "+=30", width: "30px"}, 200);
+	});
 }
 
 function handleCardDrop(event, ui) {
@@ -195,5 +201,5 @@ function getresults() {
 
 	}
 	//	$('div#cardPile').css('visibility','hidden');
-
+	$('div#resultsTab').remove();
 }
