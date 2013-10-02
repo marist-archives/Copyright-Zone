@@ -78,8 +78,19 @@ function init() {
 		});
 	});
 	
+	// When a card is dragged, the top content will collapse
+	
+	$('#cardPile div').mouseenter().mousedown(function() {
+		$('div.wideBox div#tabs').slideUp('medium', function () {
+	        $(this).hide();
+	  	});
+	});
+	
+	// This is the red ribbon's pull animation that views the results directly
 	$('#resultsTab').mousedown(function() {
 	    $(this).animate({left: "-=30", width: "60px"}, 100);
+	}).mouseleave(function() {
+		$(this).animate({left: "-16", width: "30px"}, 100);
 	});
 }
 
