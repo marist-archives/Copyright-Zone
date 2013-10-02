@@ -78,12 +78,8 @@ function init() {
 		});
 	});
 	
-	$('#resultsTab').mouseup(function() {
-	    $(this).animate({left: "+=30", width: "30px"}, 200);
-	}).bind('mouseenter', function() {
-	    $(this).animate({left: "-=30", width: "60px"}, 200);
-	}).bind('mouseleave', function() {
-	    $(this).animate({left: "+=30", width: "30px"}, 200);
+	$('#resultsTab').mousedown(function() {
+	    $(this).animate({left: "-=30", width: "60px"}, 100);
 	});
 }
 
