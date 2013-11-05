@@ -81,9 +81,9 @@ function init() {
 	// When a card is dragged, the top content will collapse
 	
 	$('#cardPile div').mouseenter().mousedown(function() {
-		$('div.wideBox div#tabs').slideUp('medium', function () {
-	        $(this).hide();
-	  	});
+		$("div.wideBox").accordion({
+			active: false
+		});
 	});
 	
 	// This is the red ribbon's pull animation that views the results directly
