@@ -28,27 +28,32 @@
 					keyboard_shortcuts: false
 				});
 				$("div.wideBox").accordion({
-					collapsible : true,
+					collapsible: true,
 					active: false
 				});
 				
-				$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
-				
 				$('div#tophead').toggle(function() {
-					$('div#arrow').css('background-image', 'url("images/ARROW1.png")');
-					$('div#arrow').css('background-repeat', 'no-repeat');
-					$('div#tophead').css('border', 'solid #ebedf2');
-				}, function() {
-					$('div#arrow').css('background-image', 'url("images/ARROW2.png")');
-					$('div#arrow').css('background-repeat', 'no-repeat');
-					$('div#tophead').css('border', 'solid #ebedf2');
-				});
+                    $('div#arrow').css('background-image', 'url("images/ARROW1.png")');
+                    $('div#arrow').css('background-repeat', 'no-repeat');
+                    $('div#tophead').css('border', 'solid #ebedf2');
+                }, function() {
+                    $('div#arrow').css('background-image', 'url("images/ARROW2.png")');
+                    $('div#arrow').css('background-repeat', 'no-repeat');
+                    $('div#tophead').css('border', 'solid #ebedf2');
+                });
+				
+				//$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
 			});
 		</script>
 		
 		<style type="text/css">
 			.pp_nav {
 				display: none !important;
+			}
+			
+			div.wideBox {
+				z-index: 99; !important;
+				overflow:visible;
 			}
 		</style>
 		
@@ -78,6 +83,7 @@
 		<div class="wideBox">
 			<div id="tophead">
 				<div id="arrow"></div><h1 style="text-align: center; color: #B31B1B;">WELCOME TO THE COPYRIGHT ZONE!</h1>
+				<h2 style="display: none; text-align: center;">Pull the ribbon to learn more about copyright.</h2><img src="images/arrow3.png" style="display: none; position: absolute; left: 580px; top: 45px;"/>
 			</div>
 			<div id="tabs">
 				<div class="side_bar" style="margin-top: 0px;">
@@ -213,7 +219,7 @@
 				</div>
 			</div>
 		</div>
-
+		<div id="infoTab" onclick="$('div.wideBox').accordion('option', 'active', 0);"></div>
 		<div id="content">
 			<div class="contentFrame">
 				<a href="help.html?iframe=true&width=55%&height=87%" class="link1" rel="prettyphoto[iframes]"><div id="helpTab"><div class="rotate">Help?</div></div></a><div id="resultsTab" onclick="getresults();"></div>

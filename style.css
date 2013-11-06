@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
 	margin-right: auto;
 	margin-left: auto;
 	width: 960px;
-
+	z-index: 99;
 }
 
 .wideBox h1 {
@@ -295,13 +295,16 @@ a.link{
 	
 }
 
-#arrow {
+#infoTab {
+	position: relative;
+	left: 1120px;
+	top: -45px;
 	float: left;
-	margin-top: 5px;
-	height: 40px;
+	height: 90px;
 	width: 30px;
-	background-image: url('images/ARROW2.png');
+	background-image: url('images/ribbon_v1.png');
 	background-repeat: no-repeat;
+	z-index: 98;
 }
 
 div#tophead {
@@ -310,11 +313,25 @@ div#tophead {
 	margin-right: auto;
 	border: solid #ebedf2;
 	cursor: pointer;
+	position: relative;
 }
 
 
-#arrow:hover {
+#infoTab:hover {
 	cursor: pointer;
+}
+
+#arrow {
+    float: left;
+    margin-top: 5px;
+    height: 40px;
+    width: 30px;
+    background-image: url('images/ARROW2.png');
+    background-repeat: no-repeat;
+}
+
+#arrow:hover {
+    cursor: pointer;
 }
 
 #tabs{
