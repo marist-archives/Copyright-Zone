@@ -40,9 +40,13 @@ function init() {
 			drop : handleCardDrop
 		});
 	}
-	$('div#1slot').css('background-color', 'GREEN').append('<br/><a href="resources.html?iframe=true&width=55%&height=75%" class="link" rel="prettyphoto[iframes]">Resources</a>');
+	/*$('div#1slot').css('background-color', 'GREEN').append('<br/><a href="resources.html?iframe=true&width=55%&height=75%" class="link" rel="prettyphoto[iframes]">Resources</a>');
 	$('div#2slot').css('background-color', 'ORANGE').append('<br/><a href="msz.html?iframe=true&width=55%&height=75%" class="link" rel="prettyphoto[iframes]">Resources</a>');
 	$('div#3slot').css('background-color', '#b31b1b').append('<br/><a href="danger.html?iframe=true&width=55%&height=75%" class="link" rel="prettyphoto[iframes]">Help</a>');
+*/
+	$('div#1slot').css('background-color', 'GREEN');
+	$('div#2slot').css('background-color', 'ORANGE');
+	$('div#3slot').css('background-color', '#b31b1b');
 
 	// Tabs
 	$('ul.tabs').each(function(){

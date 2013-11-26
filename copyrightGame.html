@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+		<title>The Copyright Game</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
+		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="copyright.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>	
+			
+		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("a[rel^='prettyPhoto']").prettyPhoto({
+					slideshow: false,
+					allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+					autoplay: false, /* Automatically start videos: True/False */
+					deeplinking: false, /* Allow prettyPhoto to update the url to enable deeplinking. */
+					overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+					keyboard_shortcuts: false
+				});
+				/*$("div.wideBox").accordion({
+					collapsible: true,
+					active: false
+				});*/
+			/*	
+				$('div#tophead').toggle(function() {
+                    $('div#arrow').css('background-image', 'url("images/ARROW1.png")');
+                    $('div#arrow').css('background-repeat', 'no-repeat');
+                    $('div#tophead').css('border', 'solid #ebedf2');
+                }, function() {
+                    $('div#arrow').css('background-image', 'url("images/ARROW2.png")');
+                    $('div#arrow').css('background-repeat', 'no-repeat');
+                    $('div#tophead').css('border', 'solid #ebedf2');
+                });
+				*/
+				//$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
+			});
+		</script>
+		
+		<style type="text/css">
+			.pp_nav {
+				display: none !important;
+			}
+			
+			div.wideBox {
+				z-index: 99; !important;
+				overflow:visible;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3375146-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+		
+	</head>
+	<body>
+		
+		<div class="wideBox">
+		</div>
+		
+		<div id="gameContent">
+			
+			<div class="contentFrame">
+				<div id="infoTab" onclick="$('div.wideBox').accordion('option', 'active', 0);"></div>
+				<a href="help.html?iframe=true&width=55%&height=87%" class="link1" rel="prettyphoto[iframes]"><div id="helpTab"><div class="rotate">Help?</div></div></a><div id="resultsTab" onclick="getresults();"></div>
+				<div id="successMessage">
+			     	<h1>Congratulations!</h1>
+		       		<p>You have completed the Copyright Zone by successfully placing all the cards to its respective zones.</p>
+		       		<p><a href="#" id="playAgain" onclick="init()">Click here to play again</a></p>
+		     	</div>
+				<div id="cardPile">
+
+				</div>
+			</div>
+			<div id="cardSlots">
+
+			</div>
+			<div id="info"></div>
+		</div>
+
+	</body>
+</html>
+

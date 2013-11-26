@@ -104,7 +104,7 @@
 						</li>
 							
 						<li>
-							<a class="side_link" href="http://library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf">Marist College Fair Use Checklist/a>
+							<a class="side_link" href="http://library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf">Marist College Fair Use Checklist</a>
 						</li>
 						<li>
 							<a class="side_link" href="http://library.marist.edu.online.library.marist.edu/forms/ask.php">Ask a Librarian</a>

@@ -11,52 +11,45 @@
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/menuStyle.css" />
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
-		<script src="copyright.js" type="text/javascript" charset="utf-8"></script>
-		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>	
-			
+
 		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("a[rel^='prettyPhoto']").prettyPhoto({
-					slideshow: false,
-					allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-					autoplay: false, /* Automatically start videos: True/False */
-					deeplinking: false, /* Allow prettyPhoto to update the url to enable deeplinking. */
-					overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
-					keyboard_shortcuts: false
+					slideshow : false,
+					allow_resize : true, /* Resize the photos bigger than viewport. true/false */
+					autoplay : false, /* Automatically start videos: True/False */
+					deeplinking : false, /* Allow prettyPhoto to update the url to enable deeplinking. */
+					overlay_gallery : false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+					keyboard_shortcuts : false
 				});
-				$("div.wideBox").accordion({
-					collapsible: true,
-					active: false
-				});
-				
-				$('div#tophead').toggle(function() {
-                    $('div#arrow').css('background-image', 'url("images/ARROW1.png")');
-                    $('div#arrow').css('background-repeat', 'no-repeat');
-                    $('div#tophead').css('border', 'solid #ebedf2');
-                }, function() {
-                    $('div#arrow').css('background-image', 'url("images/ARROW2.png")');
-                    $('div#arrow').css('background-repeat', 'no-repeat');
-                    $('div#tophead').css('border', 'solid #ebedf2');
-                });
-				
+				/*$("div.wideBox").accordion({
+				collapsible: true,
+				active: false
+				});*/
+
 				//$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
+				
+					$('#content').hover(function() {
+					$(this).css('overflow-y', 'auto');
+				}, function() {
+					$(this).css('overflow-y', 'hidden');
+				});
 			});
 		</script>
-		
+
 		<style type="text/css">
 			.pp_nav {
 				display: none !important;
 			}
-			
+
 			div.wideBox {
-				z-index: 99; !important;
-				overflow:visible;
+				z-index: 99;!important;
+				overflow: visible;
 			}
 		</style>
-		
+
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-3375146-1']);
@@ -71,7 +64,7 @@
 			})();
 
 		</script>
-		
+
 	</head>
 	<body>
 		<div id="headerContainer">
@@ -80,164 +73,42 @@
 		<div id="menu">
 			<div id="menuItems"></div>
 		</div>
+		<h1 style="text-align: center; color: #ffffff;">WELCOME TO THE COPYRIGHT ZONE!</h1>
 		<div class="wideBox">
-			<div id="tophead">
-				<div id="arrow"></div><h1 style="text-align: center; color: #B31B1B;">WELCOME TO THE COPYRIGHT ZONE!</h1>
-				<h2 style="display: none; text-align: center;">Pull the ribbon to learn more about copyright.</h2><img src="images/arrow3.png" style="display: none; position: absolute; left: 580px; top: 45px;"/>
-			</div>
 			<div id="tabs">
-				<div class="side_bar" style="margin-top: 0px;">
-					<ul class="tabs">
-						<li>
-							<a href="#a" id="#a-link" class="side_link">How to Play?</a>
-						</li>
-						<li>
-							<a href="#g" id="#g-link" class="side_link">What are the Copyright Zones?</a>
-						</li>
-						<li>
-							<a href="#b" id="#b-link" class="side_link">Marist Copyright Policy &amp; Fair Use Information</a>
-						</li>
-						<li>
-							<a href="#h" id="#h-link" class="side_link">Disclaimer</a>
-						</li>
-					
-					</ul>
-					<ul style="margin-left:-15px; margin-top: -13px;">
-						<li>
-							 <a href="resources.html?iframe=true&width=65%&height=90%"  class="side_link" rel="prettyphoto[iframes]">Resources</a>
-						</li>
-						<li>
-							 <a href="http://library.marist.edu/forms/ask.php"  target="_blank" class="side_link">Ask a Librarian</a>
-						</li>
-						<li>
-							 <a href="http://library.marist.edu/copyright/forms/copyright.php"  target="_blank" class="side_link">Copyright Clearance Request</a>
-						</li>
-					</ul>
-				</div>
 
-				<div class="content">
-					<div id="a">
-						<h2>
-							About the Marist College Copyright Zone Web Page
-						</h2>
-						<p>
-							Representing an attempt by Congress to provide guidelines for the use of copyright materials in the online education environment, <a href="http://www.copyright.com/Services/copyrightoncampus/basics/teach.html" target="_blank">the Technology, Education and Copyright Harmonization (TEACH) Act </a>became law in 2002. Generally, copyright law treats digital and non-digital copyright-protected works similarly. Yet, digital uses, including online learning and course management systems merit special attention. For instance, it is not necessarily true that a given source used legally for an on the ground course can be used legally online. 
+				<div id="content">
 
-						</p>
-						<p>
-							Online technologies provide a number of options for faculty and students, ranging from fully online courses to a course management system that augments more traditional on the ground courses. In both instances, educational content is provided to students online, thereby raising concerns about copyright infringement. When content is protected by copyright law, the use of the material must be resolved.
-						</p>
-						<p>
-							The Marist College Copyright Zone web page is here to help. The “Zone” is a resource tool to help guide you in making informed choices about using copyrighted materials safely in the online teaching environment.
-						</p>
-						<h2>
-							How to Play
-						</h2>
-						<p>
-							Marist has divided resources you may want to use into 3 Zones:
-						</p>
-						<ol style="text-align: left;">
-							<li>
-								The <a href="resources.html?iframe=true&width=55%&height=80%"  class="link1" rel="prettyphoto[iframes]">Safety Zone</a>, which contains hundreds of thousands of books, millions of scholarly articles, hundreds of hours of video, and other resources Marist has already obtained copyright permission for you to use.
-							</li>
-							<li>
-								The <a href="msz.html?iframe=true&width=55%&height=80%" class="link1" rel="prettyphoto[iframes]">Moderately Safe</a> Zone has far fewer resources. For the most part copyright permission has not been obtained by the College and in some cases would require you to obtain permission before they can be used in your class.
-							</li>
-							<li>
-								The <a href="danger.html?iframe=true&width=55%&height=80%" class="link1" rel="prettyphoto[iframes]">Danger Zone</a>. Resources in this zone definitely require you to obtain permission and pay fees for limited use.
-							</li>
-
-						</ol>
-						<p>
-							You can click on each zone to link to the materials or external sites that fall within each.
-						</p>
-						<p>
-							BUT FIRST TEST YOUR COPYRIGHT IQ. YOU MAY FIND YOU CAN DO WHAT YOU WANT IN THE SAFETY ZONE AND NOT WORRY ABOUT COPYRIGHT ISSUES.
-						</p>
-						<p>
-							SELECT FROM THE ITEMS BELOW WHAT IT IS YOU WANT TO DO AND DRAG IT INTO THE ZONE YOU THINK IT FITS. IF IT DOESN’T IT WILL BOUNCE BACK UNTIL YOU FIT IT INTO THE CORRECT BOX:
-						</p>
-
-						<p id="direct">
-							<a href="#" class="viewresults" onclick="getresults()">View the results directly</a>
-						</p>
-						<br />
-					</div>
-					
-					<div id="b">	
+					<h2> Marist Copyright Policy </h2>
+					<p>
+						It is the policy of Marist College to comply with all existing United States copyright laws including the U.S. Copyright Act of 1976, the TEACH Act of 2002, and the Digital Millennium Copyright Act.   All college faculty, staff and students are expected to act both responsibly and ethically when using copyrighted works (such as print and electronic documents, web-based content, visual materials, photographs, music and other forms of creative works) which includes making informed decisions based on the “fair use” exemptions to these laws.
+					</p>
+					<p>
+						The College strongly recommends that members of the Marist community limit their use of copyright protected materials to the hundreds of thousands of resources available through the James A. Cannavino Library (for which the college already holds the necessary licenses) or the millions of works available for educational use under Creative Commons licenses.  If copyright protected materials which are not available through these sources are vital to your work, you may request assistance, through the Library, in seeking the acquisition of, or permission to use these materials.  Such requests may take several weeks or months to complete and may include related service fees. It is also possible the desired work is simply unavailable.
+					</p>
+					<p>
+						If you are unable to find appropriate materials that are already licensed for your use and do not have time to seek permission to use the materials, you can, at your own risk, consider using it under the “fair use” exemption.  Decisions to use materials under the “fair use” exemption should be made on a case-by-case basis, re-evaluated each time the materials are used and be documented in writing as means to record the rationale for “fair use”.  The College does not assume legal or financial responsibility for any independent application of copyright principles made by College faculty or staff that do not meet the terms of related copyright law or this policy.
+					</p>
 					<h2>Disclaimer</h2>
-					<p>This information is provided to members of the Marist Community as an educational resource and to demonstrate the College’s compliance with The TEACH ACT (17 U.S.C.§ 110). The contents of this page and the contents of all links to all external resources are not intended as legal advice or as a substitute for legal advice. </p>
-					<p>If a member of the Marist faculty or staff has a question concerning the use of the resources the College has acquired for faculty and student use it should be directed in writing to Julia Hughes at ­­­­­­­­­­__________. Ms. Hughes is a non-attorney reference librarian. </p>
-					<p>Questions concerning the interpretation or application of a particular policy or legal doctrine should be submitted in writing to ____________.edu</p>
-						<h2>
-							Marist Copyright Policy
-						</h2>
-						<p>It is the policy of Marist College to comply with all existing United States copyright laws including the U.S. Copyright Act of 1976, the TEACH Act of 2002, and the Digital Millennium Copyright Act.   All college faculty, staff and students are expected to act both responsibly and ethically when using copyrighted works (such as print and electronic documents, web-based content, visual materials, photographs, music and other forms of creative works) which includes making informed decisions based on the “fair use” exemptions to these laws.  </p>
-						<p>The College strongly recommends that members of the Marist community limit their use of copyright protected materials to the hundreds of thousands of resources available through the James A. Cannavino Library (for which the college already holds the necessary licenses) or the millions of works available for educational use under Creative Commons licenses.  If copyright protected materials which are not available through these sources are vital to your work, you may request assistance, through the Library, in seeking the acquisition of, or permission to use these materials.  Such requests may take several weeks or months to complete and may include related service fees. It is also possible the desired work is simply unavailable.</p>
-						<p>If you are unable to find appropriate materials that are already licensed for your use and do not have time to seek permission to use the materials, you can, at your own risk, consider using it under the “fair use” exemption.  Decisions to use materials under the “fair use” exemption should be made on a case-by-case basis, re-evaluated each time the materials are used and be documented in writing as means to record the rationale for “fair use”.  The College does not assume legal or financial responsibility for any independent application of copyright principles made by College faculty or staff that do not meet the terms of related copyright law or this policy.  </p>
-						<h2>Fair Use Information </h2>			
-						<ol style="text-align: left;">
-				
-							<li>
-								<a href="http://dev.library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf" target="_blank" class="link1">Checklist for conducting a fair use analysis before using copyrighted materials.</a><br/>
-							</li>
-							<li>
-							<a href="http://librarycopyright.net/resources/fairuse/index.php" target="_blank" class="link1">Fair Use Evaluator.</a>	
-							</li>
+					<p>
+						This information is provided to members of the Marist Community as an educational resource and to demonstrate the College’s compliance with The TEACH ACT (17 U.S.C.§ 110). The contents of this page and the contents of all links to all external resources are not intended as legal advice or as a substitute for legal advice.
+					</p>
+					<p>
+						If a member of the Marist faculty or staff has a question concerning the use of the resources the College has acquired for faculty and student use it should be directed in writing to Julia Hughes at ­­­­­­­­­­__________. Ms. Hughes is a non-attorney reference librarian.
+					</p>
+					<p>
+						Questions concerning the interpretation or application of a particular policy or legal doctrine should be submitted in writing to ____________.edu
+					</p>
+
+				</div>
+				<div id="options">
+					<a href="resources.html?iframe=true&width=75%&height=100%" class="classname" id="btn1" rel="prettyphoto[iframes]">COPYRIGHT TOOLBOX</a>
+					<a href="#" class="classname" id="btn2">I WANT ANSWERS</a>
+					<a href="copyrightGame.html?iframe=true&width=100%&height=100%" class="classname" id="btn3" rel="prettyphoto[iframes]">TEST YOUR COPYRIGHT IQ</a>
 							
-						</ol>
-					</div>
-				
-					<div id="g">
-						<h2>What are the Copyright Zones?</h2>
-						<p>
-							Marist’s Copyright Committee is working to identify some of the most common questions faculty have in the very complex world of intellectual property rights. Towards that end it designed a game-based exercise using actions faculty often want to take and putting them into one of three zones: The Safety Zone; The Moderately Safe Zone; or the Danger Zone.
-						</p>
-						<p>
-							The purpose of the Copyright Zone is to help you understand  if what you seek to do is covered by the permissions the College has already obtained. 	</p>
-						<p>
-							You can begin by testing your copyright IQ.  Drag each example into the appropriate Zone. You may be surprised to learn what you can do “safely,” as well as what types of actions require obtaining permissions and possibly paying licensing fees. 	
-						</p>
-						<p>
-							You are also encouraged to submit to the Copyright Committee examples similar to those in this game-based exercise that you are not sure can be done within the Safety Zone. Other questions or comments are also welcomed.
-						</p>
-						<p>
-							This is not a "one and done" game. New examples based on faculty feedback will constantly be added. Further, intellectual property rights are constantly being altered and defined by the courts as content providers get increasingly aggressive in protecting what they view as their intellectual property in the higher education space. 
-						</p>
-						<p>
-							Marist, like most colleges and universities, has a not so hidden message in all of this: Stick to the Safety Zone. The College spends hundreds of thousands of dollars a year obtaining content that includes permissions for faculty to use in their courses. If you cannot find the resource you want to use in the Safety Zone, let a librarian assist you in trying to find an acceptable alternative. If you are determined to operate in the Moderately Safe or the Danger Zone, you increasingly wander into areas of greater legal complexity and possible costs. 
-						</p>
-
-					</div>
-					
-					<div id="h">
-						<h2>Disclaimer</h2>
-						<p>This information is provided to members of the Marist Community as an educational resource and to demonstrate the College’s compliance with The TEACH ACT (17 U.S.C.§ 110). The contents of this page and the contents of all links to all external resources are not intended as legal advice or as a substitute for legal advice. </p>
-						<p>If a member of the Marist faculty or staff has a question concerning the use of the resources the College has acquired for faculty and student use it should be directed in writing to Julia Hughes at ­­­­­­­­­­__________. Ms. Hughes is a non-attorney reference librarian. </p>
-						<p>Questions concerning the interpretation or application of a particular policy or legal doctrine should be submitted in writing to ____________.edu</p>
-					</div>
 				</div>
-			</div>
-		</div>
-		
-		<div id="content">
-			
-			<div class="contentFrame">
-				<div id="infoTab" onclick="$('div.wideBox').accordion('option', 'active', 0);"></div>
-				<a href="help.html?iframe=true&width=55%&height=87%" class="link1" rel="prettyphoto[iframes]"><div id="helpTab"><div class="rotate">Help?</div></div></a><div id="resultsTab" onclick="getresults();"></div>
-				<div id="successMessage">
-			     	<h1>Congratulations!</h1>
-		       		<p>You have completed the Copyright Zone by successfully placing all the cards to its respective zones.</p>
-		       		<p><a href="#" id="playAgain" onclick="init()">Click here to play again</a></p>
-		     	</div>
-				<div id="cardPile">
-
-				</div>
-			</div>
-			<div id="cardSlots">
 
 			</div>
-			<div id="info"></div>
 		</div>
 
 	</body>
