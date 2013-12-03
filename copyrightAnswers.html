@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="author"             content="Weon Yuan" />
+    <title>Copyright Cards</title>
+    <style>
+      body {
+        font-family: Tacoma, Arial, sans-serif;
+      }
+      
+      button {
+        font-size: 24px;
+        font-weight: bold;
+        width: 120px;
+        margin: 10px;
+        border-radius: 5px;
+        color: white;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        border: none;
+        opacity: 0.75;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        opacity: 1.0;
+      }
+      
+      button:focus {
+        outline: 0;
+      }
+      
+      #icon {
+        background-repeat: no-repeat;
+        width: 45px;
+        height: 45px;
+        float: left;
+        display: block;
+        margin-right: 10px;
+      }
+      
+      #statusTitle {
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 7px;
+      }
+      
+      button#Yes {
+        background-color: #00AA00;
+      }
+      
+      button#No {
+        background-color: #B31B1B;
+      }
+      
+      button#Restart {
+        background-color: gray;
+      }
+      
+      #displayCard {
+        position: relative;
+        box-shadow: 5px 5px 10px 0px #777;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      #cardControls {
+        position: absolute;
+        bottom: 20px;
+        left: auto;
+        right: auto;
+        width: 95%;
+      }
+    </style>
+    <script type="text/javascript" src="copyrightAnswers/content.js"></script>
+    <script type="text/javascript" src="copyrightAnswers/navigation.js"></script>
+    <script type="text/javascript" src="copyrightAnswers/display.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        init();
+      });
+    </script>
+  </head>
+  
+  <body>
+    <h1 style="text-align: center">I Want Answers!</h1>
+    <div id="displayCard" style="width: 500px; height: 300px; border: 1px solid #777; padding: 10px;">
+      <div id="status">
+        <div id="icon"></div>
+        <div id="statusTitle"></div>
+      </div>
+      <div id="message" style="text-align: center;"></div>
+      <div id="cardControls" style="text-align: center;">
+        <button id="Yes" onclick="btn_command(yes);">Yes</button>
+        <button id="No" onclick="btn_command(no);">No</button>
+        <button id="Restart" onclick="init();">Restart</button>
+      </div>
+    </div>
+  </body>
+</html>
