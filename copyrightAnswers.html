@@ -9,6 +9,18 @@
         font-family: Tacoma, Arial, sans-serif;
       }
       
+      h1 {
+				color: #b31b1b;
+				text-align: center;
+			}
+      
+      #line {
+        width: 722px;
+        border-top: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
       button {
         font-size: 24px;
         font-weight: bold;
@@ -59,9 +71,17 @@
       
       #displayCard {
         position: relative;
+        width: 700px;
+        height: 350px;
         box-shadow: 5px 5px 10px 0px #777;
         margin-left: auto;
         margin-right: auto;
+        border: 1px solid #777;
+        padding: 10px;
+      }
+      
+      #message p {
+        padding-top: 40px;
       }
       
       #cardControls {
@@ -70,6 +90,7 @@
         left: auto;
         right: auto;
         width: 95%;
+        text-align: center;
       }
     </style>
     <script type="text/javascript" src="copyrightAnswers/content.js"></script>
@@ -84,16 +105,18 @@
   </head>
   
   <body>
-    <h1 style="text-align: center">I Want Answers!</h1>
-    <div id="displayCard" style="width: 500px; height: 300px; border: 1px solid #777; padding: 10px;">
+    <h1>I Want Answers!</h1>
+    <div id="line">&nbsp;</div>
+    <div id="displayCard" style="">
       <div id="status">
         <div id="icon"></div>
         <div id="statusTitle"></div>
       </div>
       <div id="message" style="text-align: center;"></div>
-      <div id="cardControls" style="text-align: center;">
+      <div id="cardControls">
         <button id="Yes" onclick="btn_command(yes);">Yes</button>
         <button id="No" onclick="btn_command(no);">No</button>
+        <p>Hit the Restart button to start over.</p>
         <button id="Restart" onclick="init();">Restart</button>
       </div>
     </div>
