@@ -1,40 +1,43 @@
-//cards v.0.2
-//game.js
+//cards v.0.4
+//display.js
 //manages the display properties of the cards
 
-//initialize - current location is 0
+//initialize - current location is 15
 function init() {
   goTo(15);
   updateIcon(cards[currentLocation].iconChange());
-  $('#Yes, #No').show();
-  $('#cardControls p').hide();
-  $('#Restart, #Back').hide();
 }
 
 //this is when user reaches end of tree
 function end() {
-  $('#Yes, #No, #Back').hide();
+  $('#Yes, #No').hide();
   $('#cardControls p').show();
   $('#Restart').show();
 }
 
 function goTo(nextLocation) {
 	if(nextLocation == 15){
-		$('#Back').hide();
+		$('#Yes, #No').show();
+    $('#cardControls p').hide();
+    $('#Restart, #Back').hide();
 	}
 	else {
-	    $('#Back').show();	
+    $('#Yes, #No, #Back').show();
+    $('#cardControls p').hide();
+	  $('#Restart').hide();	
 	}
 	
   if(cards[currentLocation].status != cards[nextLocation].status) {
     updateIcon(cards[nextLocation].iconChange());
   }
-  if(nextLocation === 9 ||
-     nextLocation === 10) {
-    $('#status .dot').css('background-color', '#b31b1b');
-  } else if(nextLocation === 15) {
+
+  if(nextLocation < 10 || nextLocation === 15 || nextLocation === 16) {
     $('#status .dot').css('background-color', '#00aa00');
   }
+  else {
+    $('#status .dot').css('background-color', '#b31b1b');
+  }
+  
   updateStatus(cards[nextLocation].toString1());
   updateMessage(cards[nextLocation]);
   currentLocation = nextLocation;

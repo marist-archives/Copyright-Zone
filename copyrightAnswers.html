@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="author"             content="Weon Yuan" />
+    <meta name="author" content="Weon Yuan" />
     <title>Copyright Cards</title>
     <style>
       body {
@@ -11,9 +11,9 @@
       }
       
       h1 {
-				color: #b31b1b;
-				text-align: center;
-			}
+		color: #b31b1b;
+		text-align: center;
+	  }
       
       #line {
         width: 722px;
@@ -66,7 +66,7 @@
         background-color: #B31B1B;
       }
       
-       button#Back {
+      button#Back {
         background-color: #B31B1B;
       }
       
@@ -112,10 +112,10 @@
         text-align: center;
       }
       
-      #colorcode{
-      	margin-top:265px;
-      	margin-left: auto;
-      	margin-right: auto;
+      #colorcode {
+      	position: absolute;
+      	top: 400px;
+      	left: 210px;
       	height: 300px;
       	width: 315px;
       	
@@ -147,30 +147,31 @@
         <div id="statusTitle"></div>
         <div class="dot"></div>
       </div>
+
       <div id="message" style="text-align: center;"></div>
       <div id="cardControls">
-      	<button id="Back" onclick="btn_command(2);">Back</button>
         <button id="Yes" onclick="btn_command(yes);">Yes</button>
         <button id="No" onclick="btn_command(no);">No</button>
         <p>Hit the Restart button to start over.</p>
         <button id="Restart" onclick="init();">Restart</button>
-      </div>  
-     <div id="colorcode">
-    	  <table>
-        <tr>
-          <th colspan="2" style="text-align: left;">Color Code:</th>
-        </tr>
-        <tr>
-          <td><div class="dot">&nbsp;</div></td>
-          <td>Safety Zone: Free to access materials</td>
-        </tr>
-        <tr>
-          <td><div class="dot" style="background-color: #b31b1b">&nbsp;</div></td>
-          <td>Danger Zone: Pay to use materials</td>
-        </tr>
-      </table>
+        <button id="Back" onclick="btn_command(2);">Back</button>
+      </div>
+
+      <div id="colorcode">
+        <table>
+          <tr>
+            <th colspan="2" style="text-align: left;">Color Code:</th>
+          </tr>
+          <tr>
+            <td><div class="dot">&nbsp;</div></td>
+            <td>Safety Zone: Free to access materials</td>
+          </tr>
+          <tr>
+            <td><div class="dot" style="background-color: #b31b1b">&nbsp;</div></td>
+            <td>Danger Zone: Pay to use materials</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    </div>
-   
   </body>
 </html>

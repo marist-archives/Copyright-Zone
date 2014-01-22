@@ -53,10 +53,8 @@ var nav = new Array(/*      0     1   2*/
                     /*13*/ [-1,  -1, 12],
                     /*14*/ [-1,  -1, 12],
                     /*15*/ [16,   0],
-                    /*16*/ [-1,  -1, 0]
+                    /*16*/ [-1,  -1, 15]
                     );
-
-var navButtons = new Array("No", "Yes");
                             
 //the array of dynamic navigation buttons                    
 var navButtons_switch = new Array(/*      0     1 */
@@ -77,7 +75,7 @@ function btn_command(action) {
   
   
   //navigation logic
- if (action <= 1) {
+  if (action <= 1) {
     if (nextLocation >= 0) {
       goTo(nextLocation);
         
@@ -92,13 +90,11 @@ function btn_command(action) {
       updateMessage("An error has occurred.");
     }
   }
-  
-  //Back button logic
-else if (action == 2 ){
-	nextLocation = nav[currentLocation][action];
-	goTo(nextLocation);
+    
+    //Back button logic
+  else if (action == 2) {
+  	nextLocation = nav[currentLocation][action];
+  	goTo(nextLocation);
+  }
 }
-
-}
-
 
