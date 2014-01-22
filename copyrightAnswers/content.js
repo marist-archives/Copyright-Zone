@@ -25,11 +25,6 @@ function Card(_id, _name, _description, _status) {
     var newIcon = statuses[this.status].icon;
     return newIcon;
   }
-  
-  this.colorChange = function() {
-    var newColor = this.color;
-    return newColor;
-  }
 }
 
 function Status(_id, _name, _icon) {
@@ -55,14 +50,14 @@ statuses_2.icon = "images/checkmark.png";
 
 var statuses_3 = new Status();
 statuses_3.id = 3;
-statuses_3.name = "Information";
-statuses_3.icon = "images/info.png";
+statuses_3.name = "Caution";
+statuses_3.icon = "images/caution.png";
 
 //Card instances
 var cards_0 = new Card();
 cards_0.id = 0;
 cards_0.name = "Ask about Library Resources";
-cards_0.description = "Have you checked in the Library Resources?";
+cards_0.description = "Did you access the Library Resources?";
 cards_0.status = 0;
 
 var cards_1 = new Card();
@@ -94,14 +89,14 @@ cards_3.status = 1;
 var cards_4 = new Card();
 cards_4.id = 4;
 cards_4.name = "Ask about Creative Commons";
-cards_4.description = "Have you tried searching in the Creative Commons?";
+cards_4.description = "Have you tried checking out the Creative Commons?";
 cards_4.status = 0;
 
 var cards_5 = new Card();
 cards_5.id = 5;
 cards_5.name = "Creative Commons Confirmation";
-cards_5.description = "Did you find everything you were looking for in " +
-                      "the Creative Commons?";
+cards_5.description = "Did you find everything you were looking for in the " +
+                      "Creative Commons?";
 cards_5.status = 0;
 
 var cards_6 = new Card();
@@ -109,12 +104,7 @@ cards_6.id = 6;
 cards_6.name = "END - Creative Commons Website";
 cards_6.description = "If you were not able to find the materials you need " +
                       "through the Library Resources, check out the " +
-                      "<a href=http://search.creativecommons.org/ target=_blank>" +
-                      "Creative Commons Search website</a>." +
-                      "<p>When using the CC Search website, you can follow this " +
-                      "instructional page " +
-                      "<a href=http://libguides.marist.edu/content.php?pid=492970&sid=4047210 target=_blank>" +
-                      "here</a>.</p>";
+                      "<a href=http://creativecommons.org/ target=_blank>Creative Commons website</a>.";
 cards_6.status = 3;
 
 var cards_7 = new Card();
@@ -176,7 +166,7 @@ cards_14.status = 3;
 var cards_15 = new Card();
 cards_15.id = 15;
 cards_15.name = "Introductory card";
-cards_15.description = "Are there materials whose copyright status you are unsure of?";
+cards_15.description = "Do you have any copyright-protected materials you wish to access?";
 cards_15.status = 0;
 
 var cards_16 = new Card();

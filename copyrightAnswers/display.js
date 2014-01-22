@@ -8,32 +8,19 @@ function init() {
   updateIcon(cards[currentLocation].iconChange());
   $('#Yes, #No').show();
   $('#cardControls p').hide();
-  $('#Restart, #Back').hide();
+  $('#Restart').hide();
 }
 
 //this is when user reaches end of tree
 function end() {
-  $('#Yes, #No, #Back').hide();
+  $('#Yes, #No').hide();
   $('#cardControls p').show();
   $('#Restart').show();
 }
 
 function goTo(nextLocation) {
-	if(nextLocation == 15){
-		$('#Back').hide();
-	}
-	else {
-	    $('#Back').show();	
-	}
-	
   if(cards[currentLocation].status != cards[nextLocation].status) {
     updateIcon(cards[nextLocation].iconChange());
-  }
-  if(nextLocation === 9 ||
-     nextLocation === 10) {
-    $('#status .dot').css('background-color', '#b31b1b');
-  } else if(nextLocation === 15) {
-    $('#status .dot').css('background-color', '#00aa00');
   }
   updateStatus(cards[nextLocation].toString1());
   updateMessage(cards[nextLocation]);

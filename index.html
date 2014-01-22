@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+		<meta charset="utf-8" />
+
 		<title>The Copyright Zone</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -11,9 +11,17 @@
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/menuStyle.css" />
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
-
 		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$("#accordion").accordion();
+				$(document).tooltip();
+			});
+		</script>
+			
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("a[rel^='prettyPhoto']").prettyPhoto({
@@ -22,20 +30,10 @@
 					autoplay : false, /* Automatically start videos: True/False */
 					deeplinking : false, /* Allow prettyPhoto to update the url to enable deeplinking. */
 					overlay_gallery : false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
-					keyboard_shortcuts : false
+					keyboard_shortcuts : false,
+					theme: "facebook"
 				});
-				/*$("div.wideBox").accordion({
-				collapsible: true,
-				active: false
-				});*/
-
-				//$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
-				
-					$('#content').hover(function() {
-					$(this).css('overflow-y', 'auto');
-				}, function() {
-					$(this).css('overflow-y', 'hidden');
-				});
+			
 			});
 		</script>
 
@@ -44,10 +42,26 @@
 				display: none !important;
 			}
 
-			div.wideBox {
-				z-index: 99;!important;
-				overflow: visible;
+			
+			#accordion{
+			
+				overflow:visible;
+				margin-bottom: 40px;
+				font-family: Helvetica, arial,clean,sans-serif;
 			}
+			
+			#accordion h3{
+			color: #b31b1b;	
+			font-weight: bold;
+			font-size: 18px;
+			}
+			
+			.accordioninfo{
+				
+				height: 150px;
+			}
+			
+			
 		</style>
 
 		<script type="text/javascript">
@@ -64,8 +78,8 @@
 			})();
 
 		</script>
-
 	</head>
+
 	<body>
 		<div id="headerContainer">
 			<a href="http://library.marist.edu/" target="_self"> <div id="header"></div> </a>
@@ -75,11 +89,9 @@
 		</div>
 		<h1 style="text-align: center; color: #ffffff;">WELCOME TO THE COPYRIGHT ZONE!</h1>
 		<div class="wideBox">
-			<div id="tabs">
-
-				<div id="content">
-
-					<h2> Marist Copyright Policy </h2>
+			<div id="accordion">
+				<h3> Marist Copyright Policy </h3>
+				<div class="accordioninfo">
 					<p>
 						It is the policy of Marist College to comply with all existing United States copyright laws including the U.S. Copyright Act of 1976, the TEACH Act of 2002, and the Digital Millennium Copyright Act.   All college faculty, staff and students are expected to act both responsibly and ethically when using copyrighted works (such as print and electronic documents, web-based content, visual materials, photographs, music and other forms of creative works) which includes making informed decisions based on the “fair use” exemptions to these laws.
 					</p>
@@ -89,28 +101,23 @@
 					<p>
 						If you are unable to find appropriate materials that are already licensed for your use and do not have time to seek permission to use the materials, you can, at your own risk, consider using it under the “fair use” exemption.  Decisions to use materials under the “fair use” exemption should be made on a case-by-case basis, re-evaluated each time the materials are used and be documented in writing as means to record the rationale for “fair use”.  The College does not assume legal or financial responsibility for any independent application of copyright principles made by College faculty or staff that do not meet the terms of related copyright law or this policy.
 					</p>
-					<h2>Disclaimer</h2>
+				</div>
+				<h3>Disclaimer</h3>
+				<div class="accordioninfo">
 					<p>
 						This information is provided to members of the Marist Community as an educational resource and to demonstrate the College’s compliance with The TEACH ACT (17 U.S.C.§ 110). The contents of this page and the contents of all links to all external resources are not intended as legal advice or as a substitute for legal advice.
 					</p>
 					<p>
 						If a member of the Marist faculty or staff has a question concerning the use of the resources the College has acquired for faculty and student use it should be directed in writing to Julia Hughes at ­­­­­­­­­­__________. Ms. Hughes is a non-attorney reference librarian.
 					</p>
-					<p>
-						Questions concerning the interpretation or application of a particular policy or legal doctrine should be submitted in writing to ____________.edu
-					</p>
-
 				</div>
-				<div id="options">
-					<a href="resources.html?iframe=true&width=100%&height=100%" class="classname" id="btn1" rel="prettyphoto[iframes]">COPYRIGHT TOOLBOX</a>
-					<a href="copyrightAnswers.html?iframe=true&width=100%&height=100%" class="classname" id="btn2" rel="prettyphoto[iframes]">I WANT ANSWERS</a>
-					<a href="copyrightGame.html?iframe=true&width=100%&height=100%" class="classname" id="btn3" rel="prettyphoto[iframes]">TEST YOUR COPYRIGHT IQ</a>
-							
-				</div>
+			</div>
+			<div id="options">
+				<a href="copyrightAnswers.html?iframe=true&width=100%&height=100%" class="classname" id="btn2" rel="prettyphoto[iframes]" title="Provides recommendations to help you navigate Copyright issues.">I WANT ANSWERS</a>
+				<a href="resources1.html?iframe=true&width=100%&height=100%" class="classname" id="btn1" rel="prettyphoto[iframes]" title="Provides access to tools and information to make an informed decisions on Copyright issues. ">COPYRIGHT TOOLBOX</a>
+				<a href="copyrightGame.html?iframe=true&width=100%&height=100%" class="classname" id="btn3" rel="prettyphoto[iframes]" title="Fun and interactive game to test your Copyright IQ.">TEST YOUR COPYRIGHT IQ</a>
 
 			</div>
 		</div>
-
 	</body>
 </html>
-

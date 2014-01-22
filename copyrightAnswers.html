@@ -66,6 +66,10 @@
         background-color: #B31B1B;
       }
       
+       button#Back {
+        background-color: #B31B1B;
+      }
+      
       button#Restart {
         background-color: gray;
       }
@@ -108,11 +112,19 @@
         text-align: center;
       }
       
-      table {
+      #colorcode{
+      	margin-top:265px;
+      	margin-left: auto;
+      	margin-right: auto;
+      	height: 300px;
+      	width: 315px;
+      	
+      }
+    /*  table {
         position: absolute;
         top: 120px;
-        left: -230px;
-      }
+        left: -313px;
+    }*/
     </style>
     <script type="text/javascript" src="answers/content.js"></script>
     <script type="text/javascript" src="answers/navigation.js"></script>
@@ -129,19 +141,7 @@
     <h1>I Want Answers!</h1>
     <div id="line">&nbsp;</div>
     <div id="displayCard">
-      <table>
-        <tr>
-          <th colspan="2" style="text-align: left;">Color Code:</th>
-        </tr>
-        <tr>
-          <td><div class="dot">&nbsp;</div></td>
-          <td>Free to access materials</td>
-        </tr>
-        <tr>
-          <td><div class="dot" style="background-color: #b31b1b">&nbsp;</div></td>
-          <td>Pay to access materials</td>
-        </tr>
-      </table>
+    
       <div id="status">
         <div id="icon"></div>
         <div id="statusTitle"></div>
@@ -149,11 +149,28 @@
       </div>
       <div id="message" style="text-align: center;"></div>
       <div id="cardControls">
+      	<button id="Back" onclick="btn_command(2);">Back</button>
         <button id="Yes" onclick="btn_command(yes);">Yes</button>
         <button id="No" onclick="btn_command(no);">No</button>
         <p>Hit the Restart button to start over.</p>
         <button id="Restart" onclick="init();">Restart</button>
-      </div>
+      </div>  
+     <div id="colorcode">
+    	  <table>
+        <tr>
+          <th colspan="2" style="text-align: left;">Color Code:</th>
+        </tr>
+        <tr>
+          <td><div class="dot">&nbsp;</div></td>
+          <td>Safety Zone: Free to access materials</td>
+        </tr>
+        <tr>
+          <td><div class="dot" style="background-color: #b31b1b">&nbsp;</div></td>
+          <td>Danger Zone: Pay to use materials</td>
+        </tr>
+      </table>
     </div>
+    </div>
+   
   </body>
 </html>

@@ -1,96 +1,57 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
 
-	<head>
-		<style type="text/css">
-			h1 {
-				color: #b31b1b;
-				text-align: center;
-			}
-			body {
-				font-family: Helvetica, Arial;
-			}
-
-			#resourcearea {
-				width: 800px;
-				/*border: 1px solid black;*/
-				margin-right: auto;
-				margin-left: auto;
-			}
-
-			.toolkitbox {
-
-				/*border: 1px solid black;
-				 box-shadow: 0px 0px 3px #000000;*/
-				padding: 10px;
-				margin-top: 10px;
-				/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-			}
-
-			#toolkit1 {
-				width: 375px;
-				float: right;
-				height: 284px;
-			}
-			#toolkit2 {
-				width: 375px;;
-				float: right;
-				height: 192px;
-			}
-			#toolkit3 {
-				width: 375px;
-				margin-top: 10px;
-				float: left;
-			}
-
-			#toolkit4 {
-				width: 375px;
-				float: left;
-			}
-			#toolkit5 {
-				width: 286px;
-				float: left;
-			}
-
-			.dot {
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Resources</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   <script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>
+  <style>
+  		.dot {
 				width: 30px;
 				height: 30px;
 				border-radius: 20px;
 				float: right;
 			}
+#accordion{
+			margin-top: 100px;
+			width: 800px;				
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+			#accordion div{
+				height: 235px;
+				font-size: 12pt;
+			}
+			#toolkit5 {
+				width: 385px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 10px;
+			}
+body{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+  </style>
+</head>
 
-		</style>
-	</head>
-	<body>
-		<h1>Copyright Toolbox</h1>
-		<div id="toolkit5" class="toolkitbox">
-			<table>
-				<tr>
-					<th colspan="2" style="text-align: left;">Color Code:</th>
-				</tr>
-				<tr>
-					<td>
-					<div class="dot"  style="background-color: #00aa00">
-						&nbsp;
-					</div></td>
-					<td>Safety Zone: Free to access materials</td>
-				</tr>
-				<tr>
-					<td>
-					<div class="dot" style="background-color: #b31b1b">
-						&nbsp;
-					</div></td>
-					<td>Danger Zone: Pay to use materials</td>
-				</tr>
-			</table>
-		</div>
-		<div id="resourcearea">
-				<div id="toolkit4" class="toolkitbox">
-					<ul>
-
-						<div class="dot" style=" background-color: #b31b1b;"></div>
-						<h3>Resources</h3>
-						<li>
+<body>
+	
+  <div id="accordion">
+  	<h3>Resources<span class="dot" style=" background-color: #b31b1b;"></span></h3>
+  	<div>
+  		<ul>
+  			<li>
 							<a href="http://librarycopyright.net/resources/fairuse/index.php" target="_blank">Fair Use Evaluator</a>
 
 						</li>
@@ -115,13 +76,12 @@
 
 						</li>
 						<br/>
-
-					</ul>
-				</div>
-	<div id="toolkit1" class="toolkitbox">
-					<ul>
-						<div class="dot" style=" background-color: #00aa00;"></div>
-						<h3>Library Databases</h3>
+  		</ul>
+  	</div>
+  	<h3>Library Databases<span class="dot" style=" background-color: #00aa00;"></span></h3>
+  	<div>
+  			<ul>
+						
 						<li>
 							<a href="http://libguides.marist.edu/a-z" target="_blank">A - Z List</a>
 
@@ -145,12 +105,12 @@
 						</li>
 						<br/>
 					</ul>
-				</div>
-
-			<div id="toolkit2" class="toolkitbox">
-				<ul>
-					<div class="dot" style=" background-color: #00aa00;"></div>
-					<h3>eBooks</h3>
+  	</div>
+  	
+  	<h3>eBooks<span class="dot" style=" background-color: #00aa00;"></span></h3>
+  	<div>
+  			<ul>
+					
 					<li>
 						<a href="http://www.gutenberg.org/catalog/" target="_blank">Project Gutenburg</a>
 					</li>
@@ -160,15 +120,12 @@
 					</li>
 					<br />
 				</ul>
-			</div>
-				
-
-			<div id="toolkit3" class="toolkitbox">
-				<ul>
-					<div class="dot" style=" background-color: #00aa00;"></div>
-					<h3>Multimedia</h3>
-
-					<li>
+  	</div>
+  
+  <h3>Multimedia <span class="dot" style=" background-color: #00aa00;"></span></h3>
+  <div>
+  	<ul>
+  			<li>
 						<a href="http://search.creativecommons.org/" target="_blank">Creative Commons Multimedia Search</a>
 					</li>
 					<br />
@@ -181,8 +138,30 @@
 						<a href="http://www.c-spanvideo.org/videoLibrary/" target="_blank">C-Span Video Library</a>
 					</li>
 					<br />
-				</ul>
-			</div>
-
-	</body>
+  	</ul>
+  </div>
+  </div>
+  
+  <div id="toolkit5" class="toolkitbox">
+			<table>
+				<tr>
+					<th colspan="2" style="text-align: left;">Color Code:</th>
+				</tr>
+				<tr>
+					<td>
+					<div class="dot"  style="background-color: #00aa00">
+						&nbsp;
+					</div></td>
+					<td>Safety Zone: Free to access materials</td>
+				</tr>
+				<tr>
+					<td>
+					<div class="dot" style="background-color: #b31b1b">
+						&nbsp;
+					</div></td>
+					<td>Danger Zone: Pay to use materials</td>
+				</tr>
+			</table>
+		</div>
+</body>
 </html>
