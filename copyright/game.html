@@ -1,16 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
 		<title>The Copyright Game</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../mainStyles/style.css">
 		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
-		<script src="copyright.js" type="text/javascript" charset="utf-8"></script>
+		<script src="copyrightGame/game.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>	
 			
@@ -26,22 +25,6 @@
 					overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
 					keyboard_shortcuts: false
 				});
-				/*$("div.wideBox").accordion({
-					collapsible: true,
-					active: false
-				});*/
-			/*	
-				$('div#tophead').toggle(function() {
-                    $('div#arrow').css('background-image', 'url("images/ARROW1.png")');
-                    $('div#arrow').css('background-repeat', 'no-repeat');
-                    $('div#tophead').css('border', 'solid #ebedf2');
-                }, function() {
-                    $('div#arrow').css('background-image', 'url("images/ARROW2.png")');
-                    $('div#arrow').css('background-repeat', 'no-repeat');
-                    $('div#tophead').css('border', 'solid #ebedf2');
-                });
-				*/
-				//$.prettyPhoto.open('help.html?iframe=true&width=55%&height=87%','','');
 			});
 		</script>
 		
@@ -68,29 +51,23 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(ga, s);
 			})();
-
 		</script>
-		
 	</head>
+	
 	<body>
 		<div id="gameContent">
 			<div class="contentFrame">
-				<a href="help.html?iframe=true&width=55%&height=87%" class="link1" rel="prettyphoto[iframes]"><div id="helpTab"><div class="rotate">Help?</div></div></a><div id="resultsTab" onclick="getresults();"></div>
+				<a href="copyrightGame/help.html?iframe=true&width=55%&height=87%" class="link1" rel="prettyphoto[iframes]"><div id="helpTab"><div class="rotate">Help?</div></div></a><div id="resultsTab" onclick="getresults();"></div>
 				<div id="successMessage">
 			     	<h1>Congratulations!</h1>
 		       		<p>You have completed the Copyright Zone by successfully placing all the cards to its respective zones.</p>
 		       		<p><a href="#" id="playAgain" onclick="init()">Click here to play again</a></p>
 		     	</div>
-				<div id="cardPile">
-
-				</div>
+				<div id="cardPile"></div>
 			</div>
-			<div id="cardSlots">
-
-			</div>
+			<div id="cardSlots"></div>
 			<div id="info"></div>
 		</div>
-
 	</body>
 </html>
 

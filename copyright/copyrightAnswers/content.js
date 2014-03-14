@@ -41,22 +41,22 @@ function Status(_id, _name, _icon) {
 var statuses_0 = new Status();
 statuses_0.id = 0;
 statuses_0.name = "Question";
-statuses_0.icon = "images/question.png";
+statuses_0.icon = "../images/question.png";
 
 var statuses_1 = new Status();
 statuses_1.id = 1;
 statuses_1.name = "Great!";
-statuses_1.icon = "images/checkmark.png";
+statuses_1.icon = "../images/checkmark.png";
 
 var statuses_2 = new Status();
 statuses_2.id = 2;
 statuses_2.name = "Good!";
-statuses_2.icon = "images/checkmark.png";
+statuses_2.icon = "../images/checkmark.png";
 
 var statuses_3 = new Status();
 statuses_3.id = 3;
 statuses_3.name = "Information";
-statuses_3.icon = "images/info.png";
+statuses_3.icon = "../images/info.png";
 
 //Card instances
 var cards_0 = new Card();
@@ -77,17 +77,17 @@ cards_2.name = "Fox Hunt and Library Website";
 cards_2.description = "The James A. Cannavino Library holds the necessary licenses for thousands of copyrighted " +
                       "materials and millions of works available for available for educational use under the " +
                       "Creative Commons licenses, all of which are available to the Marist community to access. " +
-                      "Head on over to the <a href=http://marist.summon.serialssolutions.com/ target=_blank>Library website</a> " +
-                      "and use the FoxHunt search engine to access these resources.";
+                      "Head on over to the <a href=http://library.marist.edu/ target=_blank>Library website</a> " +
+                      "and use the <a href=http://marist.summon.serialssolutions.com/ target=_blank>FoxHunt search engine</a> to access these resources.";
 cards_2.status = 3;
 
 var cards_3 = new Card();
 cards_3.id = 3;
 cards_3.name = "END - Library Resources Confirmed";
 cards_3.description = "We are glad to hear that you were able to find what you need through the Library Resources! " +
-                      "You can head on over to the <a href=resources.html>Copyright Toolbox</a> " +
+                      "You can head on over to the <a href=resources1.html>Copyright Toolbox</a> " +
                       "for more information about copyrighted materials or play the " +
-                      "<a href=copyrightGame.html>Test your Copyright IQ game</a> that challenges you " +
+                      "<a href=game.html>Test your Copyright IQ game</a> that challenges you " +
                       "to identify which materials are copyrighted, and which materials are not.";
 cards_3.status = 1;
 
@@ -121,9 +121,9 @@ var cards_7 = new Card();
 cards_7.id = 7;
 cards_7.name = "END - Creative Commons Confirmed";
 cards_7.description = "We're pleased to hear that you were able to find what you need through the Creative Commons! " +
-                      "You can head on over to the <a href=resources.html>Copyright Toolbox</a> " +
+                      "You can head on over to the <a href=resources1.html>Copyright Toolbox</a> " +
                       "for more information about copyrighted materials or play the " +
-                      "<a href=copyrightGame.html>Test your Copyright IQ game</a> that challenges you " +
+                      "<a href=game.html>Test your Copyright IQ game</a> that challenges you " +
                       "to identify which materials are copyrighted, and which materials are not.";
 cards_7.status = 2;
 
@@ -162,7 +162,7 @@ cards_12.status = 0;
 var cards_13 = new Card();
 cards_13.id = 13;
 cards_13.name = "END - Provide Checklist PDF";
-cards_13.description = "Please click <a href=forms/MARISTCOLLEGEFairUseChecklist.pdf target=_blank>" +
+cards_13.description = "Please click <a href=../forms/MARISTCOLLEGEFairUseChecklist.pdf target=_blank>" +
                        "here</a> to view the Fair Use Checklist.";
 cards_13.status = 3;
 
@@ -184,9 +184,9 @@ cards_16.id = 16;
 cards_16.name = "END - This is not the site you're looking for";
 cards_16.description = "This site is intended for users who are seeking copyright-protected " +
                        "materials for education purposes and/or research purposes. You can " +
-                       "head on over to the <a href=resources.html>Copyright Toolbox</a> " +
+                       "head on over to the <a href=resources1.html>Copyright Toolbox</a> " +
                        "for more information about copyrighted materials or play the " +
-                       "<a href=copyrightGame.html>Test your Copyright IQ game</a> that " +
+                       "<a href=game.html>Test your Copyright IQ game</a> that " +
                        "challenges you to identify which materials are copyrighted, and " +
                        "which materials are not.";
 cards_16.status = 3;
