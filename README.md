@@ -1,3 +1,3 @@
 copyrightgame
 =============
-A gamified way to learn the issues and pitfalls related to copyright.
+An interactive way to learn the issues and pitfalls related to copyright.
