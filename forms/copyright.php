@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 	<head>
-		<title>Marist Copyright Clearance Request</title>
+		<title>Copyright Clearance</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
@@ -100,27 +100,29 @@
 				<div class="side_bar">
 					<ul>
 						<li>
-							<a class="side_link_current" href="#">Marist Copyright Clearance</a>
-						</li>
-							
-						<li>
-							<a class="side_link" href="http://library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf">Marist College Fair Use Checklist</a>
+							<a class="side_link" href="http://library.marist.edu/forms/ask.php">Ask a Librarian</a>
 						</li>
 						<li>
-							<a class="side_link" href="http://library.marist.edu.online.library.marist.edu/forms/ask.php">Ask a Librarian</a>
+							<a class="side_link" href="http://library.marist.edu/forms/acqbr.php">Acquisitions Request</a>
 						</li>
-					
-						
+						<li>
+							<a class="side_link_current" href="#">Copyright Clearance</a>
+						</li>
+						<li>
+							<a class="side_link" href="http://marist.illiad.oclc.org/illiad/logon.html">Inter-Library Loan</a>
+						</li>
+						<li>
+							<a class="side_link" href="http://library.marist.edu/forms/reserve_forms.html">Reserve Form</a>
+						</li>
 					</ul>
 				</div>
 				<div class= "content">
 					<p class="breadcrumb">
 						<a href="http://library.marist.edu" class="map_link"><img src="http://library.marist.edu/images/home.png" class="fox2"/></a>
-						> Forms > Marist Copyright Clearance Request
-
+						> Forms > Copyright Clearance
 					</p>
 
-					<h1 class="page_head">Marist Copyright Clearance Request</h1>
+					<h1 class="page_head">Copyright Clearance</h1>
 
 					<br>
 					<br>
@@ -176,7 +178,7 @@
 											<TR>
 												<TD class="formLabel">Title's Publication Year:</TD>
 												<td class ="ask_input" colspan="3">
-													<INPUT TYPE="text" NAME="Publication_Year" SIZE="5" />
+													<INPUT TYPE="text" NAME="PubYear" SIZE="5" />
 												</TD>
 											</TR>
 											<TR>
@@ -190,7 +192,8 @@
 											<TR>
 												<TD class="formLabel">Reuse entire book?</TD>
 												<td class ="ask_input" colspan="3">
-													<INPUT TYPE="checkbox" NAME="Reuse_Book" SIZE="10" />
+													<INPUT TYPE="hidden" NAME="Reuse_Book" VALUE="No" / >
+													<INPUT TYPE="checkbox" NAME="Reuse_Book" VALUE="Yes" SIZE="10" />
 												</TD>
 											</TR>
 											<TR>
