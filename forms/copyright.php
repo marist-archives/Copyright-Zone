@@ -1,17 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 	<head>
-		<title>Copyright Clearance</title>
+		<title>Permission Request/Estimated Cost Form</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="shortcut icon" href="http://library.marist.edu/images/jac.png" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library.css" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/library_child.css" />
 		<link rel="stylesheet" type="text/css" href="http://library.marist.edu/css/menuStyle.css" />
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/validate.js"></script>
 		<script src="http://library.marist.edu/js/libraryMenu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://library.marist.edu/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" href="http://library.marist.edu/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".expand").click(function() {
@@ -27,6 +29,11 @@
 		<script type='text/javascript'>
 			$(document).ready(function() {
 				$('#captcha1').simpleCaptcha();
+			});
+		</script>
+		<script>
+			$(function() {
+				$("#datepicker").datepicker();
 			});
 		</script>
 		
@@ -119,10 +126,10 @@
 				<div class= "content">
 					<p class="breadcrumb">
 						<a href="http://library.marist.edu" class="map_link"><img src="http://library.marist.edu/images/home.png" class="fox2"/></a>
-						> Forms > Copyright Clearance
+						> Forms > Permission Request/Estimated Cost Form
 					</p>
 
-					<h1 class="page_head">Copyright Clearance</h1>
+					<h1 class="page_head">Permission Request/Estimated Cost Form</h1>
 
 					<br>
 					<br>
@@ -141,6 +148,12 @@
 									<FORM NAME="theForm" ID="theForm" ACTION="#" METHOD="POST">
 										<TABLE width="700px">
 											<TR>
+												<TD class="formLabel">Date:</TD>
+												<td class ="ask_input" colspan="3">
+													<input type="text" name="date" class="form_input" style="width: 100px;" id="datepicker"/>
+												</TD>
+											</TR>
+											<TR>
 												<TD class="formLabel">Name:</TD>
 												<td class ="ask_input" colspan="3">
 													<INPUT TYPE="text" NAME="Name" SIZE="60" class="ask_text_input" />
@@ -153,7 +166,7 @@
 												</TD>
 											</TR>
 											<TR>
-												<TD class="formLabel">Telephone Number:</TD>
+												<TD class="formLabel">Telephone Number (e.g. 8459999999):</TD>
 												<td class ="ask_input" style="width: 150px;">
 													<INPUT TYPE="text" NAME="Phone_Num" SIZE="60" class="ask_text_input" />
 												</TD>
@@ -164,21 +177,57 @@
 												</TD>
 											</TR>
 											<TR>
+												<TD class="formLabel">Campus:</TD>
+												<td class ="ask_input">
+													<select name="Marist_Campus" size="1">
+														<option value="Poughkeepsie" selected>Poughkeepsie, NY</option>
+														<option value="Fishkill">Fishkill, NY</option>
+														<option value="Florence">Florence, Italy</option>
+														<option value="Online">Online</option>
+													</select>
+												</TD>
+											</TR>
+											<TR>
 												<TD class="formLabel">Marist Status:</TD>
 												<td class ="ask_input">
 													<select name="Marist_Status" size="1">
-														<option value="Marist Undergraduate Student">Marist Undergraduate Student</option>
-														<option value="Marist Graduate Student">Marist Graduate Student</option>
-														<option value="Student-Athlete">Student-Athlete</option>
+														<option value="Marist Student">Marist Student</option>
 														<option value="Marist Faculty" selected>Marist Faculty</option>
 														<option value="Marist Staff">Marist Staff</option>
 													</select>
 												</TD>
 											</TR>
+											<tr>
+												<td><p>Publication Information</p></td>
+											</tr>
 											<TR>
-												<TD class="formLabel">Title's Publication Year:</TD>
+												<TD class="formLabel">Type of Publication:</TD>
+												<td class ="ask_input">
+													<select name="PubType" size="1">
+														<option value="Book">Book</option>
+														<option value="Book Chapter">Book Chapter</option>
+														<option value="Journal Article" selected>Journal Article</option>
+														<option value="Video">Video</option>
+														<option value="Other">Other</option>
+													</select>
+												</TD>
+											</TR>
+											<TR>
+												<TD class="formLabel">Publication Title:</TD>
 												<td class ="ask_input" colspan="3">
-													<INPUT TYPE="text" NAME="PubYear" SIZE="5" />
+													<INPUT TYPE="text" NAME="PubTitle" SIZE="60" class="ask_text_input" />
+												</TD>
+											</TR>
+											<TR>
+												<TD class="formLabel">Article or Chapter Title:</TD>
+												<td class ="ask_input" colspan="3">
+													<INPUT TYPE="text" NAME="Article" SIZE="60" class="ask_text_input" />
+												</TD>
+											</TR>
+											<TR>
+												<TD class="formLabel">Author or Creator:</TD>
+												<td class ="ask_input" colspan="3">
+													<INPUT TYPE="text" NAME="Author" SIZE="60" class="ask_text_input" />
 												</TD>
 											</TR>
 											<TR>
@@ -189,11 +238,28 @@
 													<INPUT TYPE="text" NAME="End_Page" SIZE="2" />
 												</TD>
 											</TR>
+											<tr>
+												<td><p>Intended use of the publication</p></td>
+											</tr>
 											<TR>
-												<TD class="formLabel">Reuse entire book?</TD>
+												<TD class="formLabel">Course Title:</TD>
 												<td class ="ask_input" colspan="3">
-													<INPUT TYPE="hidden" NAME="Reuse_Book" VALUE="No" / >
-													<INPUT TYPE="checkbox" NAME="Reuse_Book" VALUE="Yes" SIZE="10" />
+													<INPUT TYPE="text" NAME="CourseTitle" SIZE="60" class="ask_text_input" />
+												</TD>
+											</TR>
+											<TR>
+												<TD class="formLabel">Course Environment:</TD>
+												<td class ="ask_input">
+													<select name="CourseEnvironment" size="1">
+														<option value="Face to Face">Face to Face course</option>
+														<option value="Online">Online course</option>
+													</select>
+												</TD>
+											</TR>
+											<TR>
+												<TD class="formLabel">Semester:</TD>
+												<td class ="ask_input" colspan="3">
+													<INPUT TYPE="text" NAME="Semester" SIZE="5" />
 												</TD>
 											</TR>
 											<TR>
@@ -204,8 +270,7 @@
 											</TR>
 											<TR>
 												<TD class="formLabel">
-													Comments:<br>
-													<p>(Optional)</p>
+													Please explain how you plan to use the publication in your course:<br>
 												</TD>
 												<td class ="ask_input" colspan="3"><textarea NAME="Comments" ROWS="10" COLS="43" ></textarea>
 												</TD>

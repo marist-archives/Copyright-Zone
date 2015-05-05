@@ -1,110 +1,125 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<style type="text/css">
-			h1 {
-				color: #b31b1b;
-				text-align: center;
-			}
-			body {
-				font-family: Helvetica, Arial;
-			}
+		<meta charset="utf-8" />
 
-			#resourcearea {
-				width: 800px;
-				margin-right: auto;
-				margin-left: auto;
-			}
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Resources</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="ZeroClipboard.js"></script>
 
-			.toolkitbox {
-				padding: 10px;
-				margin-top: 10px;
-				/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-			}
+		<script>
+			$(function() {
+				$("#accordion").accordion();
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
 
-			#toolkit1 {
-				width: 375px;
-				float: right;
-				height: 284px;
-			}
-			#toolkit2 {
-				width: 375px;;
-				float: right;
-				height: 192px;
-			}
-			#toolkit3 {
-				width: 375px;
-				margin-top: 10px;
-				float: left;
-			}
+				var clientTarget = new ZeroClipboard($("#target-to-copy"), {
+					moviePath : "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
+					debug : false
+				});
 
-			#toolkit4 {
-				width: 375px;
-				float: left;
-			}
-			#toolkit5 {
-				width: 286px;
-				float: left;
-			}
+				clientTarget.on("load", function(clientTarget) {
+					$('#flash-loaded').fadeIn();
 
+					clientTarget.on("complete", function(clientTarget, args) {
+						clientTarget.setText(args.text);
+						$('#target-to-copy-text').fadeIn().delay(800).fadeOut();
+					});
+				});
+
+			});
+		</script>
+		<style>
 			.dot {
 				width: 30px;
 				height: 30px;
 				border-radius: 20px;
 				float: right;
 			}
+
+			#accordion {
+				margin-top: 100px;
+				width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#accordion div {
+				height: 235px;
+				font-size: 12pt;
+			}
+
+			#toolkit5 {
+				width: 385px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 10px;
+			}
+			body {
+				font-family: sans-serif;
+			}
+			.search_button {
+				background-image: url(http://library.marist.edu/images/magnifying_glass.png);
+				height: 25px;
+				width: 25px;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				float: right;
+				border: 0;
+				border-top-width: 0px;
+				border-right-width: 0px;
+				border-bottom-width: 0px;
+				border-left-width: 0px;
+				border-top-style: initial;
+				border-right-style: initial;
+				border-bottom-style: initial;
+				border-left-style: initial;
+				border-top-color: initial;
+				border-right-color: initial;
+				border-bottom-color: initial;
+				border-left-color: initial;
+				cursor: pointer;
+				padding: 0;
+				filter: none;
+				border-radius: 0px 7px 7px 0px /0px 7px 7px 0px;
+			}
+
+			#target-to-copy{
+				cursor: pointer;
+			}
+			
+			
 		</style>
 	</head>
 
 	<body>
-		<h1>Copyright Toolbox</h1>
-		<div id="toolkit5" class="toolkitbox">
-			<table>
-				<tr>
-					<th colspan="2" style="text-align: left;">Color Code:</th>
-				</tr>
-				<tr>
-					<td>
-					<div class="dot"  style="background-color: #00aa00">
-						&nbsp;
-					</div></td>
-					<td>Safety Zone: Free to access materials</td>
-				</tr>
-				<tr>
-					<td>
-					<div class="dot" style="background-color: #b31b1b">
-						&nbsp;
-					</div></td>
-					<td>Danger Zone: Pay to use materials</td>
-				</tr>
-			</table>
-		</div>
 
-		<div id="resourcearea">
-			<div id="toolkit4" class="toolkitbox">
+		<div id="accordion">
+			<h3>Resources<span class="dot" style=" background-color: #b31b1b;"></span></h3>
+			<div>
 				<ul>
-					<div class="dot" style=" background-color: #b31b1b;"></div>
-					<h3>Resources</h3>
 					<li>
-						<a href="http://librarycopyright.net/resources/fairuse/index.php" target="_blank">Fair Use Evaluator</a>
+						<a href="http://library.marist.edu/copyright/forms/MaristDigitalCopyrightPolicy.pdf" target="_blank" class="link1">Marist Copyright Policy</a>
 
 					</li>
 					<br/>
 					<li>
-						<a href="http://library.marist.edu/copyright/forms/copyright.php" target="_blank">Marist Copyright Clerance Request</a>
+						<a href="http://library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf" target="_blank" class="link1">Fair Use Checklist</a>
 
 					</li>
 					<br/>
 					<li>
-						<a href="http://library.marist.edu/copyright/forms/MARISTCOLLEGEFairUseChecklist.pdf" target="_blank" class="link1">Checklist for conducting a fair use analysis before using copyrighted materials.</a>
-
+						<a href="../forms/copyright.php" target="_blank">Permission Request/Estimated Cost Form</a>
 					</li>
 					<br/>
-					<li>
-						<a href="http://www.copyright.com/?iframe=true&width=55%&height=75%" target="_blank">Copyright Clearance Center</a>
 
-					</li>
-					<br/>
 					<li>
 						<a href="http://www.copyright.gov/title17/?iframe=true&width=55%&height=75%" target="_blank">U.S. Copyright Office</a>
 
@@ -112,13 +127,39 @@
 					<br/>
 				</ul>
 			</div>
-
-			<div id="toolkit1" class="toolkitbox">
+			<h3>Copyright Syllabus Statement <span class="dot" style=" background-color: #00aa00;"></span></h3>
+			<div>
+				<p>To comply with the TEACH Act, students in a course must be notified that “materials used in connection with the course may be subject to copyright protection” (17 USCS § 110). Incorporate a statement, such as the example below, in your course syllabus to provide notification to your students. </p>
+				<p name="clipboard-text" id="clipboard-text" cols="30" rows="10">
+					Materials used in connection with the course may be subject to copyright protection.
+				</p>
+				<button id="target-to-copy" data-clipboard-target="clipboard-text">Click To Copy</button>
+				<br/>
+				<p id="target-to-copy-text" style="display:none; color: #b31b1b;">
+					Text Copied.
+				</p>
+			</div>
+			<h3>Library Databases<span class="dot" style=" background-color: #00aa00;"></span></h3>
+			<div>
 				<ul>
-					<div class="dot" style=" background-color: #00aa00;"></div>
-					<h3>Library Databases</h3>
+
 					<li>
-						<a href="http://libguides.marist.edu/a-z" target="_blank">A - Z List</a>
+
+						<img src="http://library.marist.edu/images/foxhunt.png" class = "foxhunt_logo" />Fox Hunt 2.0
+
+						<form method="GET" action="http://marist.summon.serialssolutions.com/search" class = "summon_search" target="_blank">
+							<!--div id="searchOptions"-->
+							<!--input type="hidden" id="isScholarly" name="s.fvf[]" value="isScholarly,true"/>
+							<!--input type="checkbox" id="Any" name="s.fvf[]" value="" />Any &nbsp;<input type="checkbox" id="Book" name="s.fvf[]" value="ContentType,Book / eBook" />Book/eBook  &nbsp;--<input type="checkbox" id="Journals" name="s.fvf[]" value="ContentType,Journal Article" checked="checked"/>Scholarly Journals</div-->
+							<input type="text" name="s.q" size="68" class="summon_search_bar" placeholder="Search Full Text Databases..." />
+							<input type="submit" value="" target="_blank" class="search_button fox2" />
+
+						</form>
+						<br/>
+					</li>
+					<li>
+						<a href="http://libguides.marist.edu/a-z" target="_blank">Library databases A - Z List</a>
+
 					</li>
 					<br/>
 					<li>
@@ -141,10 +182,10 @@
 				</ul>
 			</div>
 
-			<div id="toolkit2" class="toolkitbox">
+			<!--h3>eBooks<span class="dot" style=" background-color: #00aa00;"></span></h3>
+			<div>
 				<ul>
-					<div class="dot" style=" background-color: #00aa00;"></div>
-					<h3>eBooks</h3>
+
 					<li>
 						<a href="http://www.gutenberg.org/catalog/" target="_blank">Project Gutenburg</a>
 					</li>
@@ -154,17 +195,18 @@
 					</li>
 					<br />
 				</ul>
-			</div>
+			</div-->
 
-			<div id="toolkit3" class="toolkitbox">
+			<h3>Multimedia <span class="dot" style=" background-color: #00aa00;"></span></h3>
+			<div>
 				<ul>
-					<div class="dot" style=" background-color: #00aa00;"></div>
-					<h3>Multimedia</h3>
 					<li>
 						<a href="http://search.creativecommons.org/" target="_blank">Creative Commons Multimedia Search</a>
+						<p>When using the CC Search website, you can follow this instructional page <a href="http://libguides.marist.edu/creativecommons" target=_blank>here</a>.</p>
 					</li>
 					<br />
 					<li>
+
 						<a href="http://www.flickr.com/commons" target="_blank">Flickr Commons Image Search</a>
 					</li>
 					<br />
@@ -174,6 +216,35 @@
 					<br />
 				</ul>
 			</div>
+			
+			<!--h3>Contact a Librarian<span class="dot" style=" background-color: #00aa00;"></span></h3>
+			<div>
+				<p>
+				 	To discuss permissions requests or use of James A. Cannavino Library resources please contact Julia Hughes, Assistant Librarian, Research Service. <a href="mailto:Julia.Hughes@marist.edu">Julia.Hughes@marist.edu</a> or 845-575-3000 x2193.  Julia is available to meet by appointment only. 
+				</p>
+			</div-->
+		</div>
+
+		<div id="toolkit5" class="toolkitbox">
+			<table>
+				<tr>
+					<th colspan="2" style="text-align: left;">Color Code:</th>
+				</tr>
+				<tr>
+					<td>
+					<div class="dot"  style="background-color: #00aa00">
+						&nbsp;
+					</div></td>
+					<td>Safety Zone: Free to access materials</td>
+				</tr>
+				<tr>
+					<td>
+					<div class="dot" style="background-color: #b31b1b">
+						&nbsp;
+					</div></td>
+					<td>Danger Zone: Pay to use materials</td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>

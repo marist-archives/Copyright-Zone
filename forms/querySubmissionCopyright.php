@@ -62,10 +62,10 @@
 							<a class="side_link" href="http://library.marist.edu.online.library.marist.edu/forms/acqbr.php">Acquisitions Request</a>
 						</li>
 						<li>
-							<a class="side_link_current" href="#">Marist Copyright Clearance</a>
+							<a class="side_link" href="http://marist.illiad.oclc.org/illiad/logon.html">Inter-Library Loan</a>
 						</li>
 						<li>
-							<a class="side_link" href="http://marist.illiad.oclc.org/illiad/logon.html">Inter-Library Loan</a>
+							<a class="side_link_current" href="#">Marist Copyright Clearance</a>
 						</li>
 						<li>
 							<a class="side_link" href="http://library.marist.edu/forms/reserve_forms.html">Reserve Form</a>

@@ -26,7 +26,7 @@ h1, h2, h3, h4 {
 	margin-right: auto;
 	margin-left: auto;
 	width: 960px;
-	height: 565px;
+	height: 590px;
 	z-index: 99;
 	border-radius: 7px 7px 7px 7px / 7px 7px 7px 7px;
 }
@@ -354,10 +354,11 @@ div#tophead {
 }
 
 #options {
-	border-top: 1px solid Grey;
+	/*border-top: 1px solid Grey;*/
 	height: 400px;
-	width: 55%;
-	margin: 0 auto;
+	width:635px;
+	margin-top: -25px;
+	float: right;
 	padding: 10px;
 }
 
@@ -423,4 +424,12 @@ div#tophead {
 	margin-top: 30px;
 	margin-left: 130px;
 	width: 260px;
+}
+
+#quicklinks{
+	width: 250px;
+	height: 200px;
+	border-right: 1px solid grey;
+	float: left;
+	padding-left: 10px;
 }

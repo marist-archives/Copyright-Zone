@@ -142,15 +142,15 @@ cards_9.status = 3;
 
 var cards_10 = new Card();
 cards_10.id = 10;
-cards_10.name = "Ask about Copyright Clearance Form";
-cards_10.description = "Do you want to fill out a Copyright Clearance form?";
+cards_10.name = "Ask about Permission Request/Cost Estimate Form";
+cards_10.description = "Do you want to fill out a Permission Request/Cost Estimate form?";
 cards_10.status = 0;
 
 var cards_11 = new Card();
 cards_11.id = 11;
-cards_11.name = "END - Provide Copyright Clearance Form";
+cards_11.name = "END - Provide Permission Request/Cost Estimate Form";
 cards_11.description = "Please click <a href=http://library.marist.edu/copyright/forms/copyright.php target=_blank>here</a> " +
-                       "to fill out the clearance form.";
+                       "to fill out the Permission Request/Cost Estimate form.";
 cards_11.status = 3;
 
 var cards_12 = new Card();
